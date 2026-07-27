@@ -56,6 +56,7 @@ abstract class EventSettingDomainObjectAbstract extends \HiEvents\DomainObjects\
     final public const PAYMENT_PROVIDERS = 'payment_providers';
     final public const OFFLINE_PAYMENT_INSTRUCTIONS = 'offline_payment_instructions';
     final public const ALLOW_ORDERS_AWAITING_OFFLINE_PAYMENT_TO_CHECK_IN = 'allow_orders_awaiting_offline_payment_to_check_in';
+    final public const SWISH_NUMBER = 'swish_number';
     final public const INVOICE_PAYMENT_TERMS_DAYS = 'invoice_payment_terms_days';
     final public const INVOICE_NOTES = 'invoice_notes';
     final public const TICKET_DESIGN_SETTINGS = 'ticket_design_settings';
@@ -115,6 +116,7 @@ abstract class EventSettingDomainObjectAbstract extends \HiEvents\DomainObjects\
     protected array|string|null $payment_providers = null;
     protected ?string $offline_payment_instructions = null;
     protected bool $allow_orders_awaiting_offline_payment_to_check_in = false;
+    protected ?string $swish_number = null;
     protected ?int $invoice_payment_terms_days = null;
     protected ?string $invoice_notes = null;
     protected array|string|null $ticket_design_settings = null;
@@ -177,6 +179,7 @@ abstract class EventSettingDomainObjectAbstract extends \HiEvents\DomainObjects\
                     'payment_providers' => $this->payment_providers ?? null,
                     'offline_payment_instructions' => $this->offline_payment_instructions ?? null,
                     'allow_orders_awaiting_offline_payment_to_check_in' => $this->allow_orders_awaiting_offline_payment_to_check_in ?? null,
+                    'swish_number' => $this->swish_number ?? null,
                     'invoice_payment_terms_days' => $this->invoice_payment_terms_days ?? null,
                     'invoice_notes' => $this->invoice_notes ?? null,
                     'ticket_design_settings' => $this->ticket_design_settings ?? null,
@@ -685,6 +688,17 @@ abstract class EventSettingDomainObjectAbstract extends \HiEvents\DomainObjects\
     public function getOfflinePaymentInstructions(): ?string
     {
         return $this->offline_payment_instructions;
+    }
+
+    public function setSwishNumber(?string $swish_number): self
+    {
+        $this->swish_number = $swish_number;
+        return $this;
+    }
+
+    public function getSwishNumber(): ?string
+    {
+        return $this->swish_number;
     }
 
     public function setAllowOrdersAwaitingOfflinePaymentToCheckIn(

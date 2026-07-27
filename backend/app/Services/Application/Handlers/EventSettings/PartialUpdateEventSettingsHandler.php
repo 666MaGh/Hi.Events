@@ -92,6 +92,9 @@ class PartialUpdateEventSettingsHandler
                     : $existingSettings->getOfflinePaymentInstructions(),
                 'allow_orders_awaiting_offline_payment_to_check_in' => $eventSettingsDTO->settings['allow_orders_awaiting_offline_payment_to_check_in']
                     ?? $existingSettings->getAllowOrdersAwaitingOfflinePaymentToCheckIn(),
+                'swish_number' => array_key_exists('swish_number', $eventSettingsDTO->settings)
+                    ? $eventSettingsDTO->settings['swish_number']
+                    : $existingSettings->getSwishNumber(),
 
                 // Invoice settings
                 'enable_invoicing' => $eventSettingsDTO->settings['enable_invoicing'] ?? $existingSettings->getEnableInvoicing(),

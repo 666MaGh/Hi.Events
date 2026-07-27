@@ -25,6 +25,7 @@ export const PaymentAndInvoicingSettings = () => {
             payment_providers: [] as PaymentProvider[],
             offline_payment_instructions: "",
             allow_orders_awaiting_offline_payment_to_check_in: false,
+            swish_number: "",
             enable_invoicing: false,
             invoice_label: "",
             invoice_prefix: "",
@@ -39,6 +40,7 @@ export const PaymentAndInvoicingSettings = () => {
             ...values,
             payment_providers: Array.isArray(values.payment_providers) ? values.payment_providers : [],
             offline_payment_instructions: isEmptyHtml(values.offline_payment_instructions) ? null : values.offline_payment_instructions,
+            swish_number: values.swish_number?.trim() ? values.swish_number.trim() : null,
             invoice_notes: isEmptyHtml(values.invoice_notes) ? null : values.invoice_notes,
             invoice_tax_details: isEmptyHtml(values.invoice_tax_details) ? null : values.invoice_tax_details,
         }),
@@ -52,6 +54,7 @@ export const PaymentAndInvoicingSettings = () => {
                 payment_providers: eventSettingsQuery.data.payment_providers || [],
                 offline_payment_instructions: eventSettingsQuery.data.offline_payment_instructions || "",
                 allow_orders_awaiting_offline_payment_to_check_in: eventSettingsQuery.data.allow_orders_awaiting_offline_payment_to_check_in || false,
+                swish_number: eventSettingsQuery.data.swish_number || "",
                 enable_invoicing: eventSettingsQuery.data.enable_invoicing || false,
                 invoice_label: eventSettingsQuery.data.invoice_label || "",
                 invoice_prefix: eventSettingsQuery.data.invoice_prefix || "",
@@ -162,6 +165,16 @@ export const PaymentAndInvoicingSettings = () => {
                                                 ]}
                                             />
                                         }
+                                    />
+                                    <TextInput
+                                        mt="md"
+                                        mb="md"
+                                        label={<InputLabelWithHelp
+                                            label={t`Swish number`}
+                                            helpText={t`If set, buyers will see a Swish payment link and QR code with the number, amount, and order number prefilled. The Liquid tokens {{ swish.link }} and {{ swish.number }} also become available in the payment instructions above. Only shown for events priced in SEK.`}/>}
+                                        description={t`The Swish number that should receive payments. Leave empty to disable Swish.`}
+                                        placeholder="123 456 78 90"
+                                        {...form.getInputProps('swish_number')}
                                     />
                                     <Switch
                                         label={t`Allow attendees associated with unpaid orders to check in`}

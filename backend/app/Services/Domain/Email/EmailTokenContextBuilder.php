@@ -84,11 +84,47 @@ class EmailTokenContextBuilder
                 'offline_payment_instructions' => $eventSettings->getOfflinePaymentInstructions() ?? '',
                 'post_checkout_message' => $eventSettings->getPostCheckoutMessage() ?? '',
             ],
+
+            // Swish payment object
+            'swish' => $this->buildSwishContext($order, $event, $eventSettings),
         ];
 
         $context['settings']['offline_payment_instructions'] = $this->renderOfflinePaymentInstructions($context);
 
         return $context;
+    }
+
+    private function buildSwishContext(
+        OrderDomainObject        $order,
+        EventDomainObject        $event,
+        EventSettingDomainObject $eventSettings,
+    ): array
+    {
+        $swishNumber = $eventSettings->getSwishNumber();
+
+        // Swish only supports SEK payments
+        if (!$swishNumber || strtoupper($event->getCurrency() ?? '') !== 'SEK') {
+            return [
+                'number' => '',
+                'link' => '',
+            ];
+        }
+
+        $payee = preg_replace('/\D/', '', $swishNumber);
+        $totalGross = $order->getTotalGross() ?? 0;
+        $amount = floor($totalGross) === $totalGross
+            ? (string)(int)$totalGross
+            : number_format($totalGross, 2, '.', '');
+
+        return [
+            'number' => $swishNumber,
+            'link' => sprintf(
+                'https://app.swish.nu/1/p/sw/?sw=%s&amt=%s&cur=SEK&msg=%s',
+                $payee,
+                $amount,
+                rawurlencode($order->getPublicId() ?? '')
+            ),
+        ];
     }
 
     private function renderOfflinePaymentInstructions(array $context): string
@@ -186,6 +222,10 @@ class EmailTokenContextBuilder
                 'support_email' => 'support@example.com',
                 'offline_payment_instructions' => __('Please transfer the total amount to the following bank account within 5 business days.'),
                 'post_checkout_message' => __('Thank you for your purchase! We look forward to seeing you at the event.'),
+            ],
+            'swish' => [
+                'number' => '123 456 78 90',
+                'link' => 'https://app.swish.nu/1/p/sw/?sw=1234567890&amt=150&cur=SEK&msg=ORD-1234',
             ],
         ];
 

@@ -70,6 +70,7 @@ class UpdateEventSettingsHandler
                     'payment_providers' => $settings->payment_providers,
                     'offline_payment_instructions' => $this->purifier->purify($settings->offline_payment_instructions),
                     'allow_orders_awaiting_offline_payment_to_check_in' => $settings->allow_orders_awaiting_offline_payment_to_check_in,
+                    'swish_number' => $settings->swish_number !== null ? trim($settings->swish_number) : null,
 
                     // Invoice settings
                     'enable_invoicing' => $settings->enable_invoicing,

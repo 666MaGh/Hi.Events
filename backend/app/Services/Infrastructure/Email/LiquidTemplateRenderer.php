@@ -184,6 +184,16 @@ class LiquidTemplateRenderer
                 'description' => __('The email of the person who placed the order'),
                 'example' => 'john@example.com',
             ],
+            [
+                'token' => '{{ swish.link }}',
+                'description' => __('Swish payment link with number, amount, and order number prefilled. Requires a Swish number in the payment settings and SEK as the event currency'),
+                'example' => 'https://app.swish.nu/1/p/sw/?sw=1234567890&amt=150&cur=SEK&msg=ORD-1234',
+            ],
+            [
+                'token' => '{{ swish.number }}',
+                'description' => __('The Swish number from the payment settings'),
+                'example' => '123 456 78 90',
+            ],
         ];
 
         $attendeeTokens = [

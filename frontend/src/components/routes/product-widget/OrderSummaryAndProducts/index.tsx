@@ -37,6 +37,7 @@ import {EventDateRange} from "../../../common/EventDateRange";
 import {OnlineEventDetails} from "../../../common/OnlineEventDetails";
 import {AddToCalendarCTA} from "../../../common/AddToCalendarCTA";
 import {InlineOrderSummary} from "../../../common/InlineOrderSummary";
+import {SwishPaymentInfo} from "../../../common/SwishPaymentInfo";
 import {CheckoutContent} from "../../../layouts/Checkout/CheckoutContent";
 import {EditAttendeeModal} from "./EditAttendeeModal";
 import {EditOrderModal} from "./EditOrderModal";
@@ -385,9 +386,10 @@ const PostCheckoutMessage = ({ message }: { message: string }) => (
     </div>
 );
 
-const OfflinePaymentInstructions = ({ event }: { event: Event }) => (
+const OfflinePaymentInstructions = ({ event, order }: { event: Event, order: Order }) => (
     <div style={{ marginTop: '20px', marginBottom: '40px' }}>
         <h2>{t`Payment Instructions`}</h2>
+        <SwishPaymentInfo event={event} order={order}/>
         <Card>
             <div
                 dangerouslySetInnerHTML={{
@@ -587,7 +589,7 @@ export const OrderSummaryAndProducts = () => {
                     defaultExpanded={false}
                 />
 
-                {order?.status === 'AWAITING_OFFLINE_PAYMENT' && <OfflinePaymentInstructions event={event}/>}
+                {order?.status === 'AWAITING_OFFLINE_PAYMENT' && <OfflinePaymentInstructions event={event} order={order}/>}
 
                 <h1 className={classes.heading}>{t`Order Details`}</h1>
 

@@ -105,7 +105,7 @@ const Payment = () => {
 
                 {isOfflineEnabled && (
                     <div style={{display: activePaymentMethod === 'OFFLINE' ? 'block' : 'none'}}>
-                        <OfflinePaymentMethod event={checkoutEvent as Event}/>
+                        <OfflinePaymentMethod event={checkoutEvent as Event} order={order}/>
                     </div>
                 )}
 

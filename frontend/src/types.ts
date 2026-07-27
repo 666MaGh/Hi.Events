@@ -222,6 +222,7 @@ export interface EventSettings {
     offline_payment_instructions: string;
     payment_providers: PaymentProvider[];
     allow_orders_awaiting_offline_payment_to_check_in: boolean;
+    swish_number?: string;
 
     // Invoice settings
     enable_invoicing: boolean;
