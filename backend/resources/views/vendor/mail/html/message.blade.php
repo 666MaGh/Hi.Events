@@ -2,7 +2,10 @@
     {{-- Header --}}
     <x-slot:header>
         <x-mail::header :url="config('app.email_logo_link_url')">
-            @if($appLogo = config('app.email_logo_url'))
+            @php($appLogo = config('app.email_logo_url'))
+            @if($appLogo === 'none')
+                {{-- APP_EMAIL_LOGO_URL=none hides the logo entirely --}}
+            @elseif($appLogo)
                 <img src="{{ $appLogo }}" class="logo" alt="{{ config('app.name') }}"
                      style="max-width: 300px;">
             @else

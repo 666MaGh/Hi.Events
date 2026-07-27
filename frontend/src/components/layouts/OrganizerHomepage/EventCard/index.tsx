@@ -49,14 +49,17 @@ export const EventCard: React.FC<EventCardProps> = ({event, primaryColor = '#8b5
     // Get products from event categories
     const products = getProductsFromEvent(event) || [];
 
-    // Calculate price range from products
+    // Calculate price range from products, respecting the event's price display mode
+    const showInclusivePrices = event?.settings?.price_display_mode === 'INCLUSIVE';
     let lowestPrice: number | null = null;
     let highestPrice: number | null = null;
 
     products.forEach(product => {
         if (product.prices && product.prices.length > 0) {
             product.prices.forEach(price => {
-                const priceValue = price.price || 0;
+                const priceValue = (showInclusivePrices
+                    ? price.price_including_taxes_and_fees ?? (price.price ?? 0) + (price.tax_total ?? 0) + (price.fee_total ?? 0)
+                    : price.price) || 0;
                 if (lowestPrice === null || priceValue < lowestPrice) {
                     lowestPrice = priceValue;
                 }
@@ -65,7 +68,9 @@ export const EventCard: React.FC<EventCardProps> = ({event, primaryColor = '#8b5
                 }
             });
         } else {
-            const priceValue = product.price || 0;
+            const priceValue = (showInclusivePrices
+                ? product.price_including_taxes_and_fees ?? (product.price ?? 0) + (product.tax_total ?? 0) + (product.service_fee_total ?? 0)
+                : product.price) || 0;
             if (lowestPrice === null || priceValue < lowestPrice) {
                 lowestPrice = priceValue;
             }
