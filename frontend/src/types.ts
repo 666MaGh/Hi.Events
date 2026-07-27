@@ -223,6 +223,7 @@ export interface EventSettings {
     payment_providers: PaymentProvider[];
     allow_orders_awaiting_offline_payment_to_check_in: boolean;
     swish_number?: string;
+    email_logo_url?: string | null;
 
     // Invoice settings
     enable_invoicing: boolean;

@@ -58,6 +58,7 @@ class UpdateEventSettingsDTO extends BaseDTO
         public readonly ?string                 $offline_payment_instructions = null,
         public readonly bool                    $allow_orders_awaiting_offline_payment_to_check_in = false,
         public readonly ?string                 $swish_number = null,
+        public readonly ?string                 $email_logo_url = null,
 
         // Invoice settings
         public readonly bool                    $enable_invoicing = false,

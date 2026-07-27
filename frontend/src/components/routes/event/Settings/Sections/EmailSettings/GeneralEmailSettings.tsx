@@ -20,8 +20,13 @@ export const GeneralEmailSettings = () => {
         initialValues: {
             support_email: '',
             email_footer_message: '',
+            email_logo_url: '',
             notify_organizer_of_new_orders: true,
-        }
+        },
+        transformValues: (values) => ({
+            ...values,
+            email_logo_url: values.email_logo_url?.trim() ? values.email_logo_url.trim() : null,
+        }),
     });
     const formErrorHandle = useFormErrorResponseHandler();
 
@@ -30,6 +35,7 @@ export const GeneralEmailSettings = () => {
             form.setValues({
                 support_email: eventSettingsQuery.data.support_email,
                 email_footer_message: eventSettingsQuery.data.email_footer_message,
+                email_logo_url: eventSettingsQuery.data.email_logo_url || '',
                 notify_organizer_of_new_orders: eventSettingsQuery.data.notify_organizer_of_new_orders,
             });
         }
@@ -61,6 +67,13 @@ export const GeneralEmailSettings = () => {
                         {...form.getInputProps('support_email')}
                         description={t`Any queries from product holders will be sent to this email address. This will also be used as the "reply-to" address for all emails sent from this event`}
                         label={t`Support Email`}
+                    />
+
+                    <TextInput
+                        {...form.getInputProps('email_logo_url')}
+                        label={t`Email logo URL`}
+                        placeholder="https://example.com/logo.png"
+                        description={t`Publicly accessible image URL shown at the top of all emails sent from this event. Recommended width up to 300px. Leave empty to use the instance default.`}
                     />
 
                     <Editor

@@ -68,6 +68,7 @@ class UpdateEventSettingsRequest extends BaseRequest
             'offline_payment_instructions' => ['string', 'nullable', Rule::requiredIf(fn() => in_array(PaymentProviders::OFFLINE->name, $this->input('payment_providers', []), true))],
             'allow_orders_awaiting_offline_payment_to_check_in' => ['boolean'],
             'swish_number' => ['nullable', 'string', 'max:20', 'regex:/^[0-9 +\-]*$/'],
+            'email_logo_url' => ['nullable', 'url', 'max:255'],
 
             // Invoice settings
             'enable_invoicing' => ['boolean'],

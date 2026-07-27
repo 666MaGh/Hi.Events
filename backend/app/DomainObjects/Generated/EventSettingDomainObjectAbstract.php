@@ -57,6 +57,7 @@ abstract class EventSettingDomainObjectAbstract extends \HiEvents\DomainObjects\
     final public const OFFLINE_PAYMENT_INSTRUCTIONS = 'offline_payment_instructions';
     final public const ALLOW_ORDERS_AWAITING_OFFLINE_PAYMENT_TO_CHECK_IN = 'allow_orders_awaiting_offline_payment_to_check_in';
     final public const SWISH_NUMBER = 'swish_number';
+    final public const EMAIL_LOGO_URL = 'email_logo_url';
     final public const INVOICE_PAYMENT_TERMS_DAYS = 'invoice_payment_terms_days';
     final public const INVOICE_NOTES = 'invoice_notes';
     final public const TICKET_DESIGN_SETTINGS = 'ticket_design_settings';
@@ -117,6 +118,7 @@ abstract class EventSettingDomainObjectAbstract extends \HiEvents\DomainObjects\
     protected ?string $offline_payment_instructions = null;
     protected bool $allow_orders_awaiting_offline_payment_to_check_in = false;
     protected ?string $swish_number = null;
+    protected ?string $email_logo_url = null;
     protected ?int $invoice_payment_terms_days = null;
     protected ?string $invoice_notes = null;
     protected array|string|null $ticket_design_settings = null;
@@ -180,6 +182,7 @@ abstract class EventSettingDomainObjectAbstract extends \HiEvents\DomainObjects\
                     'offline_payment_instructions' => $this->offline_payment_instructions ?? null,
                     'allow_orders_awaiting_offline_payment_to_check_in' => $this->allow_orders_awaiting_offline_payment_to_check_in ?? null,
                     'swish_number' => $this->swish_number ?? null,
+                    'email_logo_url' => $this->email_logo_url ?? null,
                     'invoice_payment_terms_days' => $this->invoice_payment_terms_days ?? null,
                     'invoice_notes' => $this->invoice_notes ?? null,
                     'ticket_design_settings' => $this->ticket_design_settings ?? null,
@@ -699,6 +702,17 @@ abstract class EventSettingDomainObjectAbstract extends \HiEvents\DomainObjects\
     public function getSwishNumber(): ?string
     {
         return $this->swish_number;
+    }
+
+    public function setEmailLogoUrl(?string $email_logo_url): self
+    {
+        $this->email_logo_url = $email_logo_url;
+        return $this;
+    }
+
+    public function getEmailLogoUrl(): ?string
+    {
+        return $this->email_logo_url;
     }
 
     public function setAllowOrdersAwaitingOfflinePaymentToCheckIn(

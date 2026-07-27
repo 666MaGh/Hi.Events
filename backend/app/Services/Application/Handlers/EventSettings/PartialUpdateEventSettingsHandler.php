@@ -95,6 +95,9 @@ class PartialUpdateEventSettingsHandler
                 'swish_number' => array_key_exists('swish_number', $eventSettingsDTO->settings)
                     ? $eventSettingsDTO->settings['swish_number']
                     : $existingSettings->getSwishNumber(),
+                'email_logo_url' => array_key_exists('email_logo_url', $eventSettingsDTO->settings)
+                    ? $eventSettingsDTO->settings['email_logo_url']
+                    : $existingSettings->getEmailLogoUrl(),
 
                 // Invoice settings
                 'enable_invoicing' => $eventSettingsDTO->settings['enable_invoicing'] ?? $existingSettings->getEnableInvoicing(),
