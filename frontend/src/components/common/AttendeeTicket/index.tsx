@@ -27,7 +27,7 @@ export const AttendeeTicket = ({
                                    hideButtons = false,
                                    showPoweredBy = false,
                                }: AttendeeTicketProps) => {
-    const productPrice = getAttendeeProductPrice(attendee, product);
+    const productPrice = getAttendeeProductPrice(attendee, product, event?.settings?.price_display_mode);
     const hasVenue = event?.settings?.location_details?.venue_name || event?.settings?.location_details?.address_line_1;
 
     const ticketDesignSettings = event?.settings?.ticket_design_settings;

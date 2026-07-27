@@ -5,6 +5,7 @@ namespace HiEvents\Services\Domain\Email;
 use Carbon\Carbon;
 use HiEvents\DomainObjects\AttendeeDomainObject;
 use HiEvents\DomainObjects\Enums\PaymentProviders;
+use HiEvents\DomainObjects\Enums\PriceDisplayMode;
 use HiEvents\DomainObjects\EventDomainObject;
 use HiEvents\DomainObjects\EventSettingDomainObject;
 use HiEvents\DomainObjects\OrderDomainObject;
@@ -157,7 +158,16 @@ class EmailTokenContextBuilder
         /** @var OrderItemDomainObject $orderItem */
         $orderItem = $order->getOrderItems()->first(fn(OrderItemDomainObject $item) => $item->getProductPriceId() === $attendee->getProductPriceId());
 
-        $ticketPrice = Currency::format($orderItem?->getPrice() ?? 0, $event->getCurrency());
+        $unitPrice = $orderItem?->getPrice() ?? 0;
+
+        // Match the storefront: show the per-ticket price including taxes and fees when the
+        // event displays prices inclusively
+        if ($orderItem && $eventSettings->getPriceDisplayMode() === PriceDisplayMode::INCLUSIVE->name) {
+            $quantity = max(1, $orderItem->getQuantity());
+            $unitPrice += (($orderItem->getTotalTax() ?? 0) + ($orderItem->getTotalServiceFee() ?? 0)) / $quantity;
+        }
+
+        $ticketPrice = Currency::format($unitPrice, $event->getCurrency());
         $ticketName = $orderItem?->getItemName();
 
         // Add attendee and ticket objects
