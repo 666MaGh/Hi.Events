@@ -27,6 +27,7 @@ use HiEvents\Repository\Interfaces\AttendeeRepositoryInterface;
 use HiEvents\Repository\Interfaces\EventRepositoryInterface;
 use HiEvents\Repository\Interfaces\InvoiceRepositoryInterface;
 use HiEvents\Repository\Interfaces\OrderRepositoryInterface;
+use HiEvents\Services\Domain\Attendee\SendAttendeeTicketService;
 use HiEvents\Services\Domain\Mail\SendOrderDetailsService;
 use HiEvents\Services\Infrastructure\DomainEvents\DomainEventDispatcherService;
 use HiEvents\Services\Infrastructure\DomainEvents\Enums\DomainEventType;
@@ -47,6 +48,7 @@ class MarkOrderAsPaidService
         private readonly EventRepositoryInterface              $eventRepository,
         private readonly OrderApplicationFeeService            $orderApplicationFeeService,
         private readonly SendOrderDetailsService               $sendOrderDetailsService,
+        private readonly SendAttendeeTicketService             $sendAttendeeTicketService,
     )
     {
     }
@@ -85,6 +87,7 @@ class MarkOrderAsPaidService
 
             $updatedOrder = $this->orderRepository
                 ->loadRelation(OrderItemDomainObject::class)
+                ->loadRelation(AttendeeDomainObject::class)
                 ->findById($orderId);
 
             // Update affiliate sales if this order has an affiliate
@@ -118,6 +121,24 @@ class MarkOrderAsPaidService
                 eventSettings: $event->getEventSettings(),
                 invoice: $order->getLatestInvoice(),
             );
+
+            // Re-send the tickets now that the order is paid
+            $sentEmails = [];
+            foreach ($updatedOrder->getAttendees() ?? [] as $attendee) {
+                if (in_array($attendee->getEmail(), $sentEmails, true)) {
+                    continue;
+                }
+
+                $this->sendAttendeeTicketService->send(
+                    order: $updatedOrder,
+                    attendee: $attendee,
+                    event: $event,
+                    eventSettings: $event->getEventSettings(),
+                    organizer: $event->getOrganizer(),
+                );
+
+                $sentEmails[] = $attendee->getEmail();
+            }
 
             return $updatedOrder;
         });
