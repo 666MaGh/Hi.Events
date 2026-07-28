@@ -5,6 +5,7 @@ import { useGetMe } from "./queries/useGetMe.ts";
 import { publicEventRouteLoader } from "./routeLoaders/publicEventRouteLoader.ts";
 import { publicOrganizerRouteLoader } from "./routeLoaders/publicOrganizerRouteLoader.ts";
 import { organizerPreviewRouteLoader } from "./routeLoaders/organizerPreviewRouteLoader.ts";
+import { checkoutRouteLoader } from "./routeLoaders/checkoutRouteLoader.ts";
 
 const Root = () => {
     const [redirectPath, setRedirectPath] = useState<string | null>(null);
@@ -539,6 +540,7 @@ export const router: RouteObject[] = [
     },
     {
         path: "/checkout/:eventId",
+        loader: checkoutRouteLoader,
         async lazy() {
             const Checkout = await import("./components/layouts/Checkout");
             return { Component: Checkout.default };

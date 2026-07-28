@@ -37,6 +37,7 @@ class OrderResource extends BaseResource
             'is_fully_refunded' => $this->isFullyRefunded(),
             'is_free_order' => $this->isFreeOrder(),
             'is_manually_created' => $this->getIsManuallyCreated(),
+            'opted_into_marketing_at' => $this->getOptedIntoMarketingAt(),
             'taxes_and_fees_rollup' => $this->getTaxesAndFeesRollup(),
             'address' => $this->getAddress(),
             'notes' => $this->getNotes(),

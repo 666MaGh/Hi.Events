@@ -1,17 +1,18 @@
-import {Outlet, useBlocker, useLocation, useNavigate, useParams} from "react-router";
+import {Outlet, useBlocker, useLoaderData, useLocation, useNavigate, useParams} from "react-router";
+import {Helmet} from "react-helmet-async";
 import classes from './Checkout.module.scss';
 import {useGetOrderPublic} from "../../../queries/useGetOrderPublic.ts";
 import {t} from "@lingui/macro";
 import {Countdown} from "../../common/Countdown";
 import {ActionIcon, Button, Group, Modal, Tooltip} from "@mantine/core";
 import {IconArrowLeft, IconPrinter, IconReceipt} from "@tabler/icons-react";
-import {eventHomepagePath, eventHomepageUrl} from "../../../utilites/urlHelper.ts";
+import {eventCoverImageUrl, eventHomepagePath, eventHomepageUrl} from "../../../utilites/urlHelper.ts";
 import {ShareComponent} from "../../common/ShareIcon";
 import {AddToEventCalendarButton} from "../../common/AddEventToCalendarButton";
 import {ProgressStepper} from "../../common/ProgressStepper";
 import {useMediaQuery} from "@mantine/hooks";
 import React, {useEffect, useState} from "react";
-import {Invoice} from "../../../types.ts";
+import {Event, Invoice} from "../../../types.ts";
 import {orderClientPublic} from "../../../api/order.client.ts";
 import {downloadBinary} from "../../../utilites/download.ts";
 import {withLoadingNotification} from "../../../utilites/withLoadingNotification.tsx";
@@ -32,6 +33,8 @@ const Checkout = () => {
     const {data: order} = useGetOrderPublic(eventId, orderShortId, ['event']);
     const event = order?.event;
     const {data: publicEvent} = useGetEventPublic(eventId, !!eventId);
+    const loaderData = useLoaderData() as {event?: Event | null} | undefined;
+    const headEvent = publicEvent || loaderData?.event;
     const navigate = useNavigate();
     const location = useLocation();
     const orderIsCompleted = order?.status === 'COMPLETED';
@@ -190,6 +193,24 @@ const Checkout = () => {
 
     return (
         <CheckoutThemeProvider accentColor={accentColor} mode={checkoutMode}>
+            {headEvent && (
+                <Helmet>
+                    <title>{`${headEvent.title} | ${headEvent.organizer?.name || ''}`}</title>
+                    <meta property="og:title" content={`${headEvent.title} | ${headEvent.organizer?.name || ''}`}/>
+                    {headEvent.description_preview && (
+                        <meta property="og:description" content={headEvent.description_preview}/>
+                    )}
+                    {eventCoverImageUrl(headEvent) && (
+                        <meta property="og:image" content={eventCoverImageUrl(headEvent)}/>
+                    )}
+                    <meta property="og:type" content="website"/>
+                    <meta name="twitter:card" content="summary_large_image"/>
+                    {eventCoverImageUrl(headEvent) && (
+                        <meta name="twitter:image" content={eventCoverImageUrl(headEvent)}/>
+                    )}
+                    <meta name="robots" content="noindex, nofollow"/>
+                </Helmet>
+            )}
             <div className={classes.container} data-mode={checkoutMode}>
                 <div className={classes.mainContent}>
                     <header className={classes.header}>
