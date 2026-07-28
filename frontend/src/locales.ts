@@ -85,7 +85,7 @@ export const getClientLocale = () => {
 
 export async function dynamicActivateLocale(locale: string) {
     try {
-        locale = availableLocales.includes(locale) ? locale : "en";
+        locale = getSupportedLocale(locale);
         const module = (await import(`./locales/${locale}.po`));
         i18n.load(locale, module.messages);
         i18n.activate(locale);
@@ -95,6 +95,11 @@ export async function dynamicActivateLocale(locale: string) {
     }
 }
 
+// Browsers report some languages with codes that differ from our locale names
+const localeAliases: Record<string, string> = {
+    sv: "se", // Swedish is sv/sv-SE in browsers, but the locale file is named "se"
+};
+
 export const getSupportedLocale = (userLocale: string) => {
     const normalizedLocale = userLocale.toLowerCase();
 
@@ -103,6 +108,11 @@ export const getSupportedLocale = (userLocale: string) => {
     }
 
     const mainLanguage = normalizedLocale.split('-')[0];
+
+    if (localeAliases[mainLanguage]) {
+        return localeAliases[mainLanguage];
+    }
+
     const mainLocale = availableLocales.find(locale => locale.startsWith(mainLanguage));
     if (mainLocale) {
         return mainLocale;
