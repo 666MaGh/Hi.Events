@@ -757,7 +757,7 @@ msgid "Amazing, Event, Keywords..."
 msgstr "Verbazingwekkend, evenement, trefwoorden..."
 
 #: src/components/common/OrdersTable/index.tsx:348
-#: src/components/common/SwishPaymentInfo/index.tsx:53
+#: src/components/common/SwishPaymentInfo/index.tsx:71
 #: src/components/forms/TaxAndFeeForm/index.tsx:71
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:36
 msgid "Amount"
@@ -1223,7 +1223,7 @@ msgstr "In afwachting van offline betaling"
 msgid "Awaiting Offline Pmt."
 msgstr "Wacht op offline betaling"
 
-#: src/components/common/CheckIn/AttendeeList.tsx:88
+#: src/components/common/CheckIn/AttendeeList.tsx:93
 msgid "Awaiting payment"
 msgstr "Wacht op betaling"
 
@@ -1398,7 +1398,7 @@ msgid "Campaign"
 msgstr "Campagne"
 
 #: src/components/common/AttendeeTable/index.tsx:370
-#: src/components/common/CheckIn/CheckInOptionsModal.tsx:59
+#: src/components/common/CheckIn/CheckInOptionsModal.tsx:65
 #: src/components/common/CheckIn/ScannerSelectionModal.tsx:57
 #: src/components/common/ContactOrganizerModal/index.tsx:104
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:121
@@ -1527,11 +1527,11 @@ msgstr "Inchecken"
 msgid "Check in {0} {1}"
 msgstr "Inchecken {0} {1}"
 
-#: src/components/common/CheckIn/CheckInOptionsModal.tsx:52
+#: src/components/common/CheckIn/CheckInOptionsModal.tsx:58
 msgid "Check in and mark order as paid"
 msgstr "Inchecken en bestelling als betaald markeren"
 
-#: src/components/common/CheckIn/CheckInOptionsModal.tsx:43
+#: src/components/common/CheckIn/CheckInOptionsModal.tsx:49
 msgid "Check in only"
 msgstr "Alleen inchecken"
 
@@ -2780,6 +2780,10 @@ msgstr "Documentlabel"
 #: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:692
 msgid "Documentation"
 msgstr "Documentatie"
+
+#: src/components/common/SwishPaymentInfo/index.tsx:65
+msgid "Doesn't Swish open? Scan the QR code with your camera, or open this page in Safari."
+msgstr ""
 
 #: src/components/common/AddToCalendarCTA/index.tsx:19
 msgid "Don't forget!"
@@ -5077,7 +5081,7 @@ msgstr "Medium"
 #: src/components/common/AttendeeTable/index.tsx:188
 #: src/components/common/ContactOrganizerModal/index.tsx:88
 #: src/components/common/OrdersTable/index.tsx:254
-#: src/components/common/SwishPaymentInfo/index.tsx:55
+#: src/components/common/SwishPaymentInfo/index.tsx:73
 #: src/components/modals/SendMessageModal/index.tsx:353
 msgid "Message"
 msgstr "Bericht"
@@ -5804,7 +5808,7 @@ msgstr "Zijbalk openen"
 msgid "Open Stripe Dashboard"
 msgstr "Stripe-dashboard openen"
 
-#: src/components/common/SwishPaymentInfo/index.tsx:47
+#: src/components/common/SwishPaymentInfo/index.tsx:62
 msgid "Open Swish"
 msgstr ""
 
@@ -6300,7 +6304,7 @@ msgstr "Betalen"
 msgid "Pay to unlock"
 msgstr "Betaal om te ontgrendelen"
 
-#: src/components/common/SwishPaymentInfo/index.tsx:32
+#: src/components/common/SwishPaymentInfo/index.tsx:49
 msgid "Pay with Swish"
 msgstr ""
 
@@ -6341,7 +6345,7 @@ msgid "Payment Failed"
 msgstr "Betaling mislukt"
 
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:391
-#: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:14
+#: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:20
 msgid "Payment Instructions"
 msgstr "Betalingsinstructies"
 
@@ -7421,7 +7425,7 @@ msgstr "BTW-instellingen opslaan"
 msgid "Scan"
 msgstr "Scannen"
 
-#: src/components/common/SwishPaymentInfo/index.tsx:34
+#: src/components/common/SwishPaymentInfo/index.tsx:51
 msgid "Scan the QR code with your phone camera, or tap the button if you are on your phone. The number, amount, and message are prefilled."
 msgstr ""
 
@@ -8351,7 +8355,7 @@ msgstr "Ondersteuning per e-mail"
 msgid "Swedish"
 msgstr "Zweeds"
 
-#: src/components/common/SwishPaymentInfo/index.tsx:51
+#: src/components/common/SwishPaymentInfo/index.tsx:69
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:175
 msgid "Swish number"
 msgstr ""
@@ -8677,7 +8681,7 @@ msgstr "Deze sjablonen worden gebruikt als standaard voor alle evenementen in uw
 msgid "These templates will override the organizer defaults for this event only. If no custom template is set here, the organizer template will be used instead."
 msgstr "Deze sjablonen overschrijven de organisator-standaarden alleen voor dit evenement. Als hier geen aangepaste sjabloon is ingesteld, wordt in plaats daarvan de organisatorsjabloon gebruikt."
 
-#: src/components/common/CheckIn/CheckInOptionsModal.tsx:35
+#: src/components/common/CheckIn/CheckInOptionsModal.tsx:41
 msgid "This attendee has an unpaid order."
 msgstr "Deze deelnemer heeft een onbetaalde bestelling."
 
@@ -8870,7 +8874,7 @@ msgstr "ticket"
 msgid "Ticket"
 msgstr "Ticket"
 
-#: src/components/common/CheckIn/AttendeeList.tsx:83
+#: src/components/common/CheckIn/AttendeeList.tsx:88
 msgid "Ticket Cancelled"
 msgstr "Ticket geannuleerd"
 
@@ -9297,7 +9301,7 @@ msgstr "Onbeperkt beschikbaar"
 msgid "Unlimited usages allowed"
 msgstr "Onbeperkt gebruik toegestaan"
 
-#: src/components/common/CheckIn/CheckInOptionsModal.tsx:34
+#: src/components/common/CheckIn/CheckInOptionsModal.tsx:40
 msgid "Unpaid Order"
 msgstr "Onbetaalde bestelling"
 

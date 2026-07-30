@@ -10,11 +10,27 @@ interface SwishPaymentInfoProps {
     order: Order;
 }
 
+// Universal link: opens the Swish app when scanned with the phone camera or
+// tapped from Safari and native mail apps
 export const buildSwishLink = (swishNumber: string, amount: number, message: string): string => {
     const payee = swishNumber.replace(/\D/g, "");
     const amt = Number.isInteger(amount) ? String(amount) : amount.toFixed(2);
 
     return `https://app.swish.nu/1/p/sw/?sw=${payee}&amt=${amt}&cur=SEK&msg=${encodeURIComponent(message)}`;
+};
+
+// App scheme link: opens the Swish app from any browser on the phone,
+// including Chrome on iOS where universal links do not trigger the app
+export const buildSwishAppLink = (swishNumber: string, amount: number, message: string): string => {
+    const payee = swishNumber.replace(/\D/g, "");
+    const data = {
+        version: 1,
+        payee: {value: payee, editable: false},
+        amount: {value: amount, editable: false},
+        message: {value: message, editable: false},
+    };
+
+    return `swish://payment?data=${encodeURIComponent(JSON.stringify(data))}`;
 };
 
 export const SwishPaymentInfo = ({event, order}: SwishPaymentInfoProps) => {
@@ -25,7 +41,8 @@ export const SwishPaymentInfo = ({event, order}: SwishPaymentInfoProps) => {
         return null;
     }
 
-    const swishLink = buildSwishLink(swishNumber, order.total_gross, order.public_id);
+    const swishQrLink = buildSwishLink(swishNumber, order.total_gross, order.public_id);
+    const swishAppLink = buildSwishAppLink(swishNumber, order.total_gross, order.public_id);
 
     return (
         <Card>
@@ -35,17 +52,18 @@ export const SwishPaymentInfo = ({event, order}: SwishPaymentInfoProps) => {
             </Text>
             <div style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "16px"}}>
                 <div style={{background: "#ffffff", padding: "12px", borderRadius: "8px"}}>
-                    <QRCode value={swishLink} size={168}/>
+                    <QRCode value={swishQrLink} size={168}/>
                 </div>
                 <Button
                     component="a"
-                    href={swishLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={swishAppLink}
                     fullWidth
                 >
                     {t`Open Swish`} — {formatCurrency(order.total_gross, order.currency)}
                 </Button>
+                <Text size="xs" c="dimmed">
+                    {t`Doesn't Swish open? Scan the QR code with your camera, or open this page in Safari.`}
+                </Text>
             </div>
             <Text size="sm" mt="md" c="dimmed">
                 {t`Swish number`}: {swishNumber}

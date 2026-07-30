@@ -756,7 +756,7 @@ msgid "Amazing, Event, Keywords..."
 msgstr "令人惊叹, 活动, 关键词..."
 
 #: src/components/common/OrdersTable/index.tsx:348
-#: src/components/common/SwishPaymentInfo/index.tsx:53
+#: src/components/common/SwishPaymentInfo/index.tsx:71
 #: src/components/forms/TaxAndFeeForm/index.tsx:71
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:36
 msgid "Amount"
@@ -1222,7 +1222,7 @@ msgstr "等待线下付款"
 msgid "Awaiting Offline Pmt."
 msgstr "等待线下付款"
 
-#: src/components/common/CheckIn/AttendeeList.tsx:88
+#: src/components/common/CheckIn/AttendeeList.tsx:93
 msgid "Awaiting payment"
 msgstr "等待付款"
 
@@ -1397,7 +1397,7 @@ msgid "Campaign"
 msgstr "活动"
 
 #: src/components/common/AttendeeTable/index.tsx:370
-#: src/components/common/CheckIn/CheckInOptionsModal.tsx:59
+#: src/components/common/CheckIn/CheckInOptionsModal.tsx:65
 #: src/components/common/CheckIn/ScannerSelectionModal.tsx:57
 #: src/components/common/ContactOrganizerModal/index.tsx:104
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:121
@@ -1526,11 +1526,11 @@ msgstr "签到"
 msgid "Check in {0} {1}"
 msgstr "签到 {0} {1}"
 
-#: src/components/common/CheckIn/CheckInOptionsModal.tsx:52
+#: src/components/common/CheckIn/CheckInOptionsModal.tsx:58
 msgid "Check in and mark order as paid"
 msgstr "签到并标记订单为已付款"
 
-#: src/components/common/CheckIn/CheckInOptionsModal.tsx:43
+#: src/components/common/CheckIn/CheckInOptionsModal.tsx:49
 msgid "Check in only"
 msgstr "仅签到"
 
@@ -2779,6 +2779,10 @@ msgstr "文档标签"
 #: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:692
 msgid "Documentation"
 msgstr "文档"
+
+#: src/components/common/SwishPaymentInfo/index.tsx:65
+msgid "Doesn't Swish open? Scan the QR code with your camera, or open this page in Safari."
+msgstr ""
 
 #: src/components/common/AddToCalendarCTA/index.tsx:19
 msgid "Don't forget!"
@@ -5076,7 +5080,7 @@ msgstr "媒介"
 #: src/components/common/AttendeeTable/index.tsx:188
 #: src/components/common/ContactOrganizerModal/index.tsx:88
 #: src/components/common/OrdersTable/index.tsx:254
-#: src/components/common/SwishPaymentInfo/index.tsx:55
+#: src/components/common/SwishPaymentInfo/index.tsx:73
 #: src/components/modals/SendMessageModal/index.tsx:353
 msgid "Message"
 msgstr "消息"
@@ -5803,7 +5807,7 @@ msgstr "打开侧边栏"
 msgid "Open Stripe Dashboard"
 msgstr "打开 Stripe 仪表板"
 
-#: src/components/common/SwishPaymentInfo/index.tsx:47
+#: src/components/common/SwishPaymentInfo/index.tsx:62
 msgid "Open Swish"
 msgstr ""
 
@@ -6299,7 +6303,7 @@ msgstr "付款"
 msgid "Pay to unlock"
 msgstr "付款解锁"
 
-#: src/components/common/SwishPaymentInfo/index.tsx:32
+#: src/components/common/SwishPaymentInfo/index.tsx:49
 msgid "Pay with Swish"
 msgstr ""
 
@@ -6340,7 +6344,7 @@ msgid "Payment Failed"
 msgstr "付款失败"
 
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:391
-#: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:14
+#: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:20
 msgid "Payment Instructions"
 msgstr "支付说明"
 
@@ -7420,7 +7424,7 @@ msgstr "保存增值税设置"
 msgid "Scan"
 msgstr "扫描"
 
-#: src/components/common/SwishPaymentInfo/index.tsx:34
+#: src/components/common/SwishPaymentInfo/index.tsx:51
 msgid "Scan the QR code with your phone camera, or tap the button if you are on your phone. The number, amount, and message are prefilled."
 msgstr ""
 
@@ -8350,7 +8354,7 @@ msgstr "支持电子邮件"
 msgid "Swedish"
 msgstr "瑞典语"
 
-#: src/components/common/SwishPaymentInfo/index.tsx:51
+#: src/components/common/SwishPaymentInfo/index.tsx:69
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:175
 msgid "Swish number"
 msgstr ""
@@ -8676,7 +8680,7 @@ msgstr "这些模板将用作您组织中所有活动的默认模板。单个活
 msgid "These templates will override the organizer defaults for this event only. If no custom template is set here, the organizer template will be used instead."
 msgstr "这些模板将仅覆盖此活动的组织者默认设置。如果这里没有设置自定义模板，将使用组织者模板。"
 
-#: src/components/common/CheckIn/CheckInOptionsModal.tsx:35
+#: src/components/common/CheckIn/CheckInOptionsModal.tsx:41
 msgid "This attendee has an unpaid order."
 msgstr "此参与者有未付款的订单。"
 
@@ -8869,7 +8873,7 @@ msgstr "入场券"
 msgid "Ticket"
 msgstr "门票"
 
-#: src/components/common/CheckIn/AttendeeList.tsx:83
+#: src/components/common/CheckIn/AttendeeList.tsx:88
 msgid "Ticket Cancelled"
 msgstr "门票已取消"
 
@@ -9296,7 +9300,7 @@ msgstr "无限供应"
 msgid "Unlimited usages allowed"
 msgstr "允许无限次使用"
 
-#: src/components/common/CheckIn/CheckInOptionsModal.tsx:34
+#: src/components/common/CheckIn/CheckInOptionsModal.tsx:40
 msgid "Unpaid Order"
 msgstr "未付款订单"
 

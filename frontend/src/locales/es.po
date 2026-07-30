@@ -756,7 +756,7 @@ msgid "Amazing, Event, Keywords..."
 msgstr "Increíble, evento, palabras clave..."
 
 #: src/components/common/OrdersTable/index.tsx:348
-#: src/components/common/SwishPaymentInfo/index.tsx:53
+#: src/components/common/SwishPaymentInfo/index.tsx:71
 #: src/components/forms/TaxAndFeeForm/index.tsx:71
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:36
 msgid "Amount"
@@ -1222,7 +1222,7 @@ msgstr "Esperando pago offline"
 msgid "Awaiting Offline Pmt."
 msgstr "Esperando pago fuera de línea"
 
-#: src/components/common/CheckIn/AttendeeList.tsx:88
+#: src/components/common/CheckIn/AttendeeList.tsx:93
 msgid "Awaiting payment"
 msgstr "Esperando pago"
 
@@ -1397,7 +1397,7 @@ msgid "Campaign"
 msgstr "Campaña"
 
 #: src/components/common/AttendeeTable/index.tsx:370
-#: src/components/common/CheckIn/CheckInOptionsModal.tsx:59
+#: src/components/common/CheckIn/CheckInOptionsModal.tsx:65
 #: src/components/common/CheckIn/ScannerSelectionModal.tsx:57
 #: src/components/common/ContactOrganizerModal/index.tsx:104
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:121
@@ -1526,11 +1526,11 @@ msgstr "Registrar entrada"
 msgid "Check in {0} {1}"
 msgstr "Registrar {0} {1}"
 
-#: src/components/common/CheckIn/CheckInOptionsModal.tsx:52
+#: src/components/common/CheckIn/CheckInOptionsModal.tsx:58
 msgid "Check in and mark order as paid"
 msgstr "Registrar entrada y marcar pedido como pagado"
 
-#: src/components/common/CheckIn/CheckInOptionsModal.tsx:43
+#: src/components/common/CheckIn/CheckInOptionsModal.tsx:49
 msgid "Check in only"
 msgstr "Solo registrar entrada"
 
@@ -2779,6 +2779,10 @@ msgstr "Etiqueta del documento"
 #: src/components/routes/account/ManageAccount/sections/PaymentSettings/index.tsx:692
 msgid "Documentation"
 msgstr "Documentación"
+
+#: src/components/common/SwishPaymentInfo/index.tsx:65
+msgid "Doesn't Swish open? Scan the QR code with your camera, or open this page in Safari."
+msgstr ""
 
 #: src/components/common/AddToCalendarCTA/index.tsx:19
 msgid "Don't forget!"
@@ -5076,7 +5080,7 @@ msgstr "Medio"
 #: src/components/common/AttendeeTable/index.tsx:188
 #: src/components/common/ContactOrganizerModal/index.tsx:88
 #: src/components/common/OrdersTable/index.tsx:254
-#: src/components/common/SwishPaymentInfo/index.tsx:55
+#: src/components/common/SwishPaymentInfo/index.tsx:73
 #: src/components/modals/SendMessageModal/index.tsx:353
 msgid "Message"
 msgstr "Mensaje"
@@ -5803,7 +5807,7 @@ msgstr "Abrir barra lateral"
 msgid "Open Stripe Dashboard"
 msgstr "Abrir panel de Stripe"
 
-#: src/components/common/SwishPaymentInfo/index.tsx:47
+#: src/components/common/SwishPaymentInfo/index.tsx:62
 msgid "Open Swish"
 msgstr ""
 
@@ -6299,7 +6303,7 @@ msgstr "Pagar"
 msgid "Pay to unlock"
 msgstr "Pagar para desbloquear"
 
-#: src/components/common/SwishPaymentInfo/index.tsx:32
+#: src/components/common/SwishPaymentInfo/index.tsx:49
 msgid "Pay with Swish"
 msgstr ""
 
@@ -6340,7 +6344,7 @@ msgid "Payment Failed"
 msgstr "Pago fallido"
 
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:391
-#: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:14
+#: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:20
 msgid "Payment Instructions"
 msgstr "Instrucciones de pago"
 
@@ -7420,7 +7424,7 @@ msgstr "Guardar Configuración del IVA"
 msgid "Scan"
 msgstr "Escanear"
 
-#: src/components/common/SwishPaymentInfo/index.tsx:34
+#: src/components/common/SwishPaymentInfo/index.tsx:51
 msgid "Scan the QR code with your phone camera, or tap the button if you are on your phone. The number, amount, and message are prefilled."
 msgstr ""
 
@@ -8350,7 +8354,7 @@ msgstr "Correo electrónico de soporte"
 msgid "Swedish"
 msgstr "Sueco"
 
-#: src/components/common/SwishPaymentInfo/index.tsx:51
+#: src/components/common/SwishPaymentInfo/index.tsx:69
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:175
 msgid "Swish number"
 msgstr ""
@@ -8676,7 +8680,7 @@ msgstr "Estas plantillas se usarán como predeterminadas para todos los eventos 
 msgid "These templates will override the organizer defaults for this event only. If no custom template is set here, the organizer template will be used instead."
 msgstr "Estas plantillas anularán los predeterminados del organizador solo para este evento. Si no se establece una plantilla personalizada aquí, se usará la plantilla del organizador en su lugar."
 
-#: src/components/common/CheckIn/CheckInOptionsModal.tsx:35
+#: src/components/common/CheckIn/CheckInOptionsModal.tsx:41
 msgid "This attendee has an unpaid order."
 msgstr "Este asistente tiene un pedido sin pagar."
 
@@ -8869,7 +8873,7 @@ msgstr "entrada"
 msgid "Ticket"
 msgstr "Entrada"
 
-#: src/components/common/CheckIn/AttendeeList.tsx:83
+#: src/components/common/CheckIn/AttendeeList.tsx:88
 msgid "Ticket Cancelled"
 msgstr "Entrada Cancelada"
 
@@ -9296,7 +9300,7 @@ msgstr "Ilimitado disponible"
 msgid "Unlimited usages allowed"
 msgstr "Usos ilimitados permitidos"
 
-#: src/components/common/CheckIn/CheckInOptionsModal.tsx:34
+#: src/components/common/CheckIn/CheckInOptionsModal.tsx:40
 msgid "Unpaid Order"
 msgstr "Pedido no pagado"
 
