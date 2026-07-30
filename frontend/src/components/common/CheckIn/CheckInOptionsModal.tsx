@@ -26,11 +26,17 @@ export const CheckInOptionsModal = ({
             onClose={onClose}
             title={<Trans>Check in {attendee.first_name} {attendee.last_name}</Trans>}
             size="md"
+            styles={{
+                content: {border: '3px solid #e03131', backgroundColor: '#fff5f5'},
+                header: {backgroundColor: '#fff5f5'},
+                title: {color: '#c92a2a', fontWeight: 700},
+            }}
         >
             <Stack>
                 <Alert
                     icon={<IconAlertCircle size={20}/>}
-                    variant={'light'}
+                    color="red"
+                    variant="filled"
                     title={t`Unpaid Order`}>
                     {t`This attendee has an unpaid order.`}
                 </Alert>
