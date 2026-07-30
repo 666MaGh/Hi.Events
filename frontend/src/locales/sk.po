@@ -2781,7 +2781,11 @@ msgid "Documentation"
 msgstr "Dokumentácia"
 
 #: src/components/common/SwishPaymentInfo/index.tsx:65
-msgid "Doesn't Swish open? Scan the QR code with your camera, or open this page in Safari."
+#~ msgid "Doesn't Swish open? Scan the QR code with your camera, or open this page in Safari."
+#~ msgstr ""
+
+#: src/components/common/SwishPaymentInfo/index.tsx:65
+msgid "Doesn't Swish open? Scan the QR code with your phone camera instead."
 msgstr ""
 
 #: src/components/common/AddToCalendarCTA/index.tsx:19

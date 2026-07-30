@@ -2781,8 +2781,12 @@ msgid "Documentation"
 msgstr "Dokumentation"
 
 #: src/components/common/SwishPaymentInfo/index.tsx:65
-msgid "Doesn't Swish open? Scan the QR code with your camera, or open this page in Safari."
-msgstr "Öppnas inte Swish? Skanna QR-koden med kameran, eller öppna sidan i Safari."
+#~ msgid "Doesn't Swish open? Scan the QR code with your camera, or open this page in Safari."
+#~ msgstr "Öppnas inte Swish? Skanna QR-koden med kameran, eller öppna sidan i Safari."
+
+#: src/components/common/SwishPaymentInfo/index.tsx:65
+msgid "Doesn't Swish open? Scan the QR code with your phone camera instead."
+msgstr "Öppnas inte Swish? Skanna QR-koden med mobilkameran i stället."
 
 #: src/components/common/AddToCalendarCTA/index.tsx:19
 msgid "Don't forget!"
@@ -2855,7 +2859,7 @@ msgid ""
 "Due to the high risk of spam, you must connect a Stripe account before you can send messages to attendees.\n"
 "This is to ensure that all event organizers are verified and accountable."
 msgstr "På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare. Detta för att säkerställa att alla arrangörer är verifierade och ansvariga."
-"På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare. Detta för att säkerställa att alla arrangörer är verifierade och ansvariga.På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare. Detta för att säkerställa att alla arrangörer är verifierade och ansvariga.På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare. Detta för att säkerställa att alla arrangörer är verifierade och ansvariga.På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare.\n"
+"På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare. Detta för att säkerställa att alla arrangörer är verifierade och ansvariga.På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare. Detta för att säkerställa att alla arrangörer är verifierade och ansvariga.På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare. Detta för att säkerställa att alla arrangörer är verifierade och ansvariga.På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare. Detta för att säkerställa att alla arrangörer är verifierade och ansvariga.På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare.\n"
 "Detta för att säkerställa att alla arrangörer är verifierade och ansvariga.På grund av den höga risken för spam måste du ansluta ett Stripe-konto innan du kan skicka meddelanden till deltagare.\n"
 "Detta är för att säkerställa att alla evenemangsarrangörer är verifierade och ansvariga."
 
@@ -6873,7 +6877,7 @@ msgid ""
 "Provide additional context or instructions for this question. Use this field to add terms\n"
 "and conditions, guidelines, or any important information that attendees need to know before answering."
 msgstr "Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor, riktlinjer eller annan viktig information som deltagarna behöver känna till innan de svarar."
-"Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor, riktlinjer eller annan viktig information som deltagarna behöver känna till innan de svarar.Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor, riktlinjer eller annan viktig information som deltagarna behöver känna till innan de svarar.Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor, riktlinjer eller annan viktig information som deltagarna behöver känna till innan de svarar.Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor,\n"
+"Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor, riktlinjer eller annan viktig information som deltagarna behöver känna till innan de svarar.Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor, riktlinjer eller annan viktig information som deltagarna behöver känna till innan de svarar.Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor, riktlinjer eller annan viktig information som deltagarna behöver känna till innan de svarar.Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor, riktlinjer eller annan viktig information som deltagarna behöver känna till innan de svarar.Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor,\n"
 "riktlinjer eller annan viktig information som deltagarna behöver känna till innan de svarar.Ge ytterligare kontext eller instruktioner för denna fråga. Använd detta fält för att lägga till villkor,\n"
 "riktlinjer eller viktig information som deltagare behöver veta innan de svarar."
 

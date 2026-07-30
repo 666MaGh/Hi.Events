@@ -62,7 +62,7 @@ export const SwishPaymentInfo = ({event, order}: SwishPaymentInfoProps) => {
                     {t`Open Swish`} — {formatCurrency(order.total_gross, order.currency)}
                 </Button>
                 <Text size="xs" c="dimmed">
-                    {t`Doesn't Swish open? Scan the QR code with your camera, or open this page in Safari.`}
+                    {t`Doesn't Swish open? Scan the QR code with your phone camera instead.`}
                 </Text>
             </div>
             <Text size="sm" mt="md" c="dimmed">
