@@ -1441,7 +1441,7 @@ msgstr "Annuleren zal alle deelnemers geassocieerd met deze bestelling annuleren
 
 #: src/components/common/AttendeeStatusBadge/index.tsx:28
 #: src/components/common/AttendeeTable/index.tsx:295
-#: src/components/common/AttendeeTicket/index.tsx:155
+#: src/components/common/AttendeeTicket/index.tsx:156
 #: src/components/common/OrdersTable/index.tsx:430
 #: src/components/common/OrderStatusBadge/index.tsx:9
 #: src/components/common/WaitlistTable/index.tsx:27
@@ -2106,7 +2106,7 @@ msgstr "Doorgaan naar betaling"
 msgid "Control how platform fees are handled for this event"
 msgstr "Bepaal hoe platformkosten worden behandeld voor dit evenement"
 
-#: src/components/common/AttendeeTicket/index.tsx:214
+#: src/components/common/AttendeeTicket/index.tsx:220
 #: src/components/common/CopyButton/index.tsx:13
 #: src/components/modals/CheckInListSuccessModal/index.tsx:42
 #: src/components/modals/EventLiveCelebrationModal/index.tsx:75
@@ -2167,7 +2167,7 @@ msgstr "Kopieer Email"
 msgid "Copy link"
 msgstr "Link kopiëren"
 
-#: src/components/common/AttendeeTicket/index.tsx:214
+#: src/components/common/AttendeeTicket/index.tsx:220
 #: src/components/modals/ShareModal/index.tsx:171
 msgid "Copy Link"
 msgstr "Link kopiëren"
@@ -5622,6 +5622,10 @@ msgstr "Niet Ingecheckt"
 msgid "Not Eligible"
 msgstr "Niet in Aanmerking"
 
+#: src/components/common/AttendeeTicket/index.tsx:174
+msgid "Not paid, pay at the entrance"
+msgstr ""
+
 #: src/components/modals/ManageAttendeeModal/index.tsx:130
 #: src/components/modals/ManageOrderModal/index.tsx:164
 msgid "Notes"
@@ -6292,7 +6296,7 @@ msgstr "Gepauzeerd"
 msgid "Pay"
 msgstr "Betalen"
 
-#: src/components/common/AttendeeTicket/index.tsx:155
+#: src/components/common/AttendeeTicket/index.tsx:156
 msgid "Pay to unlock"
 msgstr "Betaal om te ontgrendelen"
 
@@ -6711,7 +6715,7 @@ msgstr "Ticket afdrukken"
 msgid "Print Tickets"
 msgstr "Tickets afdrukken"
 
-#: src/components/common/AttendeeTicket/index.tsx:202
+#: src/components/common/AttendeeTicket/index.tsx:208
 msgid "Print to PDF"
 msgstr "Afdrukken naar PDF"
 
@@ -8907,7 +8911,7 @@ msgstr "Tickethouders"
 msgid "Ticket Holders"
 msgstr "Tickethouders"
 
-#: src/components/common/AttendeeTicket/index.tsx:174
+#: src/components/common/AttendeeTicket/index.tsx:180
 msgid "Ticket ID"
 msgstr "Ticket-ID"
 

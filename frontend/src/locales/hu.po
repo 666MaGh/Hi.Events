@@ -1440,7 +1440,7 @@ msgstr "A törlés törli az összes ehhez a rendeléshez tartozó résztvevőt,
 
 #: src/components/common/AttendeeStatusBadge/index.tsx:28
 #: src/components/common/AttendeeTable/index.tsx:295
-#: src/components/common/AttendeeTicket/index.tsx:155
+#: src/components/common/AttendeeTicket/index.tsx:156
 #: src/components/common/OrdersTable/index.tsx:430
 #: src/components/common/OrderStatusBadge/index.tsx:9
 #: src/components/common/WaitlistTable/index.tsx:27
@@ -2105,7 +2105,7 @@ msgstr "Tovább a fizetéshez"
 msgid "Control how platform fees are handled for this event"
 msgstr "Szabályozza, hogyan kezelje a platformdíjakat ezen eseménynél"
 
-#: src/components/common/AttendeeTicket/index.tsx:214
+#: src/components/common/AttendeeTicket/index.tsx:220
 #: src/components/common/CopyButton/index.tsx:13
 #: src/components/modals/CheckInListSuccessModal/index.tsx:42
 #: src/components/modals/EventLiveCelebrationModal/index.tsx:75
@@ -2166,7 +2166,7 @@ msgstr "E-mail másolása"
 msgid "Copy link"
 msgstr "Link másolása"
 
-#: src/components/common/AttendeeTicket/index.tsx:214
+#: src/components/common/AttendeeTicket/index.tsx:220
 #: src/components/modals/ShareModal/index.tsx:171
 msgid "Copy Link"
 msgstr "Link másolása"
@@ -5621,6 +5621,10 @@ msgstr "Nincs bejelentkezve"
 msgid "Not Eligible"
 msgstr "Nem jogosult"
 
+#: src/components/common/AttendeeTicket/index.tsx:174
+msgid "Not paid, pay at the entrance"
+msgstr ""
+
 #: src/components/modals/ManageAttendeeModal/index.tsx:130
 #: src/components/modals/ManageOrderModal/index.tsx:164
 msgid "Notes"
@@ -6291,7 +6295,7 @@ msgstr "Szüneteltetve"
 msgid "Pay"
 msgstr "Fizetés"
 
-#: src/components/common/AttendeeTicket/index.tsx:155
+#: src/components/common/AttendeeTicket/index.tsx:156
 msgid "Pay to unlock"
 msgstr "Fizessen a feloldáshoz"
 
@@ -6710,7 +6714,7 @@ msgstr "Jegy nyomtatása"
 msgid "Print Tickets"
 msgstr "Jegyek nyomtatása"
 
-#: src/components/common/AttendeeTicket/index.tsx:202
+#: src/components/common/AttendeeTicket/index.tsx:208
 msgid "Print to PDF"
 msgstr "Nyomtatás PDF-be"
 
@@ -8906,7 +8910,7 @@ msgstr "Jegytulajdonosok"
 msgid "Ticket Holders"
 msgstr "Jegytulajdonosok"
 
-#: src/components/common/AttendeeTicket/index.tsx:174
+#: src/components/common/AttendeeTicket/index.tsx:180
 msgid "Ticket ID"
 msgstr "Jegy azonosító"
 

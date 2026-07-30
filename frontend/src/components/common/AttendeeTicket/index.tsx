@@ -129,8 +129,9 @@ export const AttendeeTicket = ({
                             </div>
                         )}
 
-                        {/* QR Code or Status Placeholder */}
-                        {(isCancelled || isAwaitingPayment) ? (
+                        {/* QR Code or Status Placeholder. Unpaid tickets keep their real QR so
+                            door staff can scan them; the check-in tool warns about payment. */}
+                        {isCancelled ? (
                             <div className={`${classes.qrPlaceholder} ${isCancelled ? classes.qrPlaceholderCancelled : classes.qrPlaceholderPending}`}>
                                 {/* Faded QR Pattern Background */}
                                 <div className={classes.qrPatternBackground}>
@@ -157,17 +158,22 @@ export const AttendeeTicket = ({
                                 </div>
                             </div>
                         ) : (
-                            <div
-                                className={classes.qrContainer}
-                                style={{borderColor: accentColor}}
-                            >
-                                <QRCode
-                                    value={String(attendee.public_id)}
-                                    size={180}
-                                    level="M"
-                                    style={{height: "auto", maxWidth: "100%", width: "100%"}}
-                                />
-                            </div>
+                            <>
+                                <div
+                                    className={classes.qrContainer}
+                                    style={{borderColor: accentColor}}
+                                >
+                                    <QRCode
+                                        value={String(attendee.public_id)}
+                                        size={180}
+                                        level="M"
+                                        style={{height: "auto", maxWidth: "100%", width: "100%"}}
+                                    />
+                                </div>
+                                {isAwaitingPayment && (
+                                    <span className={classes.unpaidBadge}>{t`Not paid, pay at the entrance`}</span>
+                                )}
+                            </>
                         )}
 
                         <div className={classes.ticketId}>

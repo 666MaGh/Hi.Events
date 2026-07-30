@@ -1440,7 +1440,7 @@ msgstr "Avbrytande kommer att avbryta alla deltagare som är kopplade till denna
 
 #: src/components/common/AttendeeStatusBadge/index.tsx:28
 #: src/components/common/AttendeeTable/index.tsx:295
-#: src/components/common/AttendeeTicket/index.tsx:155
+#: src/components/common/AttendeeTicket/index.tsx:156
 #: src/components/common/OrdersTable/index.tsx:430
 #: src/components/common/OrderStatusBadge/index.tsx:9
 #: src/components/common/WaitlistTable/index.tsx:27
@@ -2105,7 +2105,7 @@ msgstr "Fortsätt till betalning"
 msgid "Control how platform fees are handled for this event"
 msgstr "Kontrollera hur plattformsavgifter hanteras för detta evenemang"
 
-#: src/components/common/AttendeeTicket/index.tsx:214
+#: src/components/common/AttendeeTicket/index.tsx:220
 #: src/components/common/CopyButton/index.tsx:13
 #: src/components/modals/CheckInListSuccessModal/index.tsx:42
 #: src/components/modals/EventLiveCelebrationModal/index.tsx:75
@@ -2166,7 +2166,7 @@ msgstr "Kopiera e-post"
 msgid "Copy link"
 msgstr "Kopiera länk"
 
-#: src/components/common/AttendeeTicket/index.tsx:214
+#: src/components/common/AttendeeTicket/index.tsx:220
 #: src/components/modals/ShareModal/index.tsx:171
 msgid "Copy Link"
 msgstr "Kopiera länk"
@@ -2851,7 +2851,7 @@ msgid ""
 "Due to the high risk of spam, you must connect a Stripe account before you can send messages to attendees.\n"
 "This is to ensure that all event organizers are verified and accountable."
 msgstr "På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare. Detta för att säkerställa att alla arrangörer är verifierade och ansvariga."
-"På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare. Detta för att säkerställa att alla arrangörer är verifierade och ansvariga.På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare.\n"
+"På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare. Detta för att säkerställa att alla arrangörer är verifierade och ansvariga.På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare. Detta för att säkerställa att alla arrangörer är verifierade och ansvariga.På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare.\n"
 "Detta för att säkerställa att alla arrangörer är verifierade och ansvariga.På grund av den höga risken för spam måste du ansluta ett Stripe-konto innan du kan skicka meddelanden till deltagare.\n"
 "Detta är för att säkerställa att alla evenemangsarrangörer är verifierade och ansvariga."
 
@@ -5622,6 +5622,10 @@ msgstr "Inte incheckad"
 msgid "Not Eligible"
 msgstr "Inte behörig"
 
+#: src/components/common/AttendeeTicket/index.tsx:174
+msgid "Not paid, pay at the entrance"
+msgstr "Ej betald, betala i entrén"
+
 #: src/components/modals/ManageAttendeeModal/index.tsx:130
 #: src/components/modals/ManageOrderModal/index.tsx:164
 msgid "Notes"
@@ -6292,7 +6296,7 @@ msgstr "Pausad"
 msgid "Pay"
 msgstr "Betala"
 
-#: src/components/common/AttendeeTicket/index.tsx:155
+#: src/components/common/AttendeeTicket/index.tsx:156
 msgid "Pay to unlock"
 msgstr "Betala för att låsa upp"
 
@@ -6711,7 +6715,7 @@ msgstr "Skriv ut biljett"
 msgid "Print Tickets"
 msgstr "Skriv ut biljetter"
 
-#: src/components/common/AttendeeTicket/index.tsx:202
+#: src/components/common/AttendeeTicket/index.tsx:208
 msgid "Print to PDF"
 msgstr "Skriv ut till PDF"
 
@@ -6865,7 +6869,7 @@ msgid ""
 "Provide additional context or instructions for this question. Use this field to add terms\n"
 "and conditions, guidelines, or any important information that attendees need to know before answering."
 msgstr "Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor, riktlinjer eller annan viktig information som deltagarna behöver känna till innan de svarar."
-"Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor, riktlinjer eller annan viktig information som deltagarna behöver känna till innan de svarar.Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor,\n"
+"Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor, riktlinjer eller annan viktig information som deltagarna behöver känna till innan de svarar.Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor, riktlinjer eller annan viktig information som deltagarna behöver känna till innan de svarar.Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor,\n"
 "riktlinjer eller annan viktig information som deltagarna behöver känna till innan de svarar.Ge ytterligare kontext eller instruktioner för denna fråga. Använd detta fält för att lägga till villkor,\n"
 "riktlinjer eller viktig information som deltagare behöver veta innan de svarar."
 
@@ -8908,7 +8912,7 @@ msgstr "Biljettinnehavare"
 msgid "Ticket Holders"
 msgstr "Biljettinnehavare"
 
-#: src/components/common/AttendeeTicket/index.tsx:174
+#: src/components/common/AttendeeTicket/index.tsx:180
 msgid "Ticket ID"
 msgstr "Biljett-ID"
 

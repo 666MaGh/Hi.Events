@@ -1440,7 +1440,7 @@ msgstr "Hủy sẽ hủy tất cả người tham dự liên quan đến đơn h
 
 #: src/components/common/AttendeeStatusBadge/index.tsx:28
 #: src/components/common/AttendeeTable/index.tsx:295
-#: src/components/common/AttendeeTicket/index.tsx:155
+#: src/components/common/AttendeeTicket/index.tsx:156
 #: src/components/common/OrdersTable/index.tsx:430
 #: src/components/common/OrderStatusBadge/index.tsx:9
 #: src/components/common/WaitlistTable/index.tsx:27
@@ -2105,7 +2105,7 @@ msgstr "Tiếp tục thanh toán"
 msgid "Control how platform fees are handled for this event"
 msgstr "Kiểm soát cách xử lý phí nền tảng cho sự kiện này"
 
-#: src/components/common/AttendeeTicket/index.tsx:214
+#: src/components/common/AttendeeTicket/index.tsx:220
 #: src/components/common/CopyButton/index.tsx:13
 #: src/components/modals/CheckInListSuccessModal/index.tsx:42
 #: src/components/modals/EventLiveCelebrationModal/index.tsx:75
@@ -2166,7 +2166,7 @@ msgstr "Sao chép Email"
 msgid "Copy link"
 msgstr "Sao chép liên kết"
 
-#: src/components/common/AttendeeTicket/index.tsx:214
+#: src/components/common/AttendeeTicket/index.tsx:220
 #: src/components/modals/ShareModal/index.tsx:171
 msgid "Copy Link"
 msgstr "Sao chép Link"
@@ -5621,6 +5621,10 @@ msgstr "Chưa Đăng Ký"
 msgid "Not Eligible"
 msgstr "Không Đủ Điều Kiện"
 
+#: src/components/common/AttendeeTicket/index.tsx:174
+msgid "Not paid, pay at the entrance"
+msgstr ""
+
 #: src/components/modals/ManageAttendeeModal/index.tsx:130
 #: src/components/modals/ManageOrderModal/index.tsx:164
 msgid "Notes"
@@ -6291,7 +6295,7 @@ msgstr "Tạm dừng"
 msgid "Pay"
 msgstr "Thanh toán"
 
-#: src/components/common/AttendeeTicket/index.tsx:155
+#: src/components/common/AttendeeTicket/index.tsx:156
 msgid "Pay to unlock"
 msgstr "Thanh toán để mở khóa"
 
@@ -6710,7 +6714,7 @@ msgstr "In vé"
 msgid "Print Tickets"
 msgstr "In vé"
 
-#: src/components/common/AttendeeTicket/index.tsx:202
+#: src/components/common/AttendeeTicket/index.tsx:208
 msgid "Print to PDF"
 msgstr "In ra PDF"
 
@@ -8906,7 +8910,7 @@ msgstr "Người sở hữu vé"
 msgid "Ticket Holders"
 msgstr "Người giữ vé"
 
-#: src/components/common/AttendeeTicket/index.tsx:174
+#: src/components/common/AttendeeTicket/index.tsx:180
 msgid "Ticket ID"
 msgstr "ID vé"
 
