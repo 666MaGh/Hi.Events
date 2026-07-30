@@ -208,7 +208,7 @@ export const InlineOrderSummary = ({
                         </div>
                     </div>
 
-                    {showBuyerProtection && order.is_payment_required && (
+                    {showBuyerProtection && event?.settings?.show_secure_checkout_notice !== false && order.is_payment_required && (
                         <div className={classes.buyerProtection}>
                             <IconShieldCheck size={20} className={classes.buyerProtectionIcon}/>
                             <div className={classes.buyerProtectionText}>

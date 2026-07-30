@@ -57,6 +57,7 @@ class EventSettingsResource extends JsonResource
             'allow_orders_awaiting_offline_payment_to_check_in' => $this->getAllowOrdersAwaitingOfflinePaymentToCheckIn(),
             'swish_number' => $this->getSwishNumber(),
             'email_logo_url' => $this->getEmailLogoUrl(),
+            'show_secure_checkout_notice' => $this->getShowSecureCheckoutNotice(),
 
             // Invoice settings
             'enable_invoicing' => $this->getEnableInvoicing(),

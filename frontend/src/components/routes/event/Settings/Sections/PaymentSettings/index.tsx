@@ -26,6 +26,7 @@ export const PaymentAndInvoicingSettings = () => {
             offline_payment_instructions: "",
             allow_orders_awaiting_offline_payment_to_check_in: false,
             swish_number: "",
+            show_secure_checkout_notice: true,
             enable_invoicing: false,
             invoice_label: "",
             invoice_prefix: "",
@@ -55,6 +56,7 @@ export const PaymentAndInvoicingSettings = () => {
                 offline_payment_instructions: eventSettingsQuery.data.offline_payment_instructions || "",
                 allow_orders_awaiting_offline_payment_to_check_in: eventSettingsQuery.data.allow_orders_awaiting_offline_payment_to_check_in || false,
                 swish_number: eventSettingsQuery.data.swish_number || "",
+                show_secure_checkout_notice: eventSettingsQuery.data.show_secure_checkout_notice ?? true,
                 enable_invoicing: eventSettingsQuery.data.enable_invoicing || false,
                 invoice_label: eventSettingsQuery.data.invoice_label || "",
                 invoice_prefix: eventSettingsQuery.data.invoice_prefix || "",
@@ -184,6 +186,16 @@ export const PaymentAndInvoicingSettings = () => {
                                     />
                                 </Card>
                             )}
+                        </Paper>
+
+                        <Paper withBorder p="md" radius="md">
+                            <Text size="lg" fw={500} mb="md">{t`Checkout`}</Text>
+                            <Switch
+                                label={t`Show the Secure Checkout notice`}
+                                description={t`Shows "Secure Checkout - Your payment is protected with bank-level encryption" in the checkout order summary.`}
+                                checked={form.values.show_secure_checkout_notice}
+                                onChange={(event) => form.setFieldValue('show_secure_checkout_notice', event.currentTarget.checked)}
+                            />
                         </Paper>
 
                         <Paper withBorder p="md" radius="md">

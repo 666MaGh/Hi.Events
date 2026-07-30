@@ -70,6 +70,7 @@ class EventSettingsResourcePublic extends JsonResource
             'offline_payment_instructions' => $this->getOfflinePaymentInstructions(),
             'allow_orders_awaiting_offline_payment_to_check_in' => $this->getAllowOrdersAwaitingOfflinePaymentToCheckIn(),
             'swish_number' => $this->getSwishNumber(),
+            'show_secure_checkout_notice' => $this->getShowSecureCheckoutNotice(),
 
             // Invoice settings
             'require_billing_address' => $this->getRequireBillingAddress(),

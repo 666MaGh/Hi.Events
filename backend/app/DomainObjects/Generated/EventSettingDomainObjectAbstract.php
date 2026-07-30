@@ -58,6 +58,7 @@ abstract class EventSettingDomainObjectAbstract extends \HiEvents\DomainObjects\
     final public const ALLOW_ORDERS_AWAITING_OFFLINE_PAYMENT_TO_CHECK_IN = 'allow_orders_awaiting_offline_payment_to_check_in';
     final public const SWISH_NUMBER = 'swish_number';
     final public const EMAIL_LOGO_URL = 'email_logo_url';
+    final public const SHOW_SECURE_CHECKOUT_NOTICE = 'show_secure_checkout_notice';
     final public const INVOICE_PAYMENT_TERMS_DAYS = 'invoice_payment_terms_days';
     final public const INVOICE_NOTES = 'invoice_notes';
     final public const TICKET_DESIGN_SETTINGS = 'ticket_design_settings';
@@ -119,6 +120,7 @@ abstract class EventSettingDomainObjectAbstract extends \HiEvents\DomainObjects\
     protected bool $allow_orders_awaiting_offline_payment_to_check_in = false;
     protected ?string $swish_number = null;
     protected ?string $email_logo_url = null;
+    protected bool $show_secure_checkout_notice = true;
     protected ?int $invoice_payment_terms_days = null;
     protected ?string $invoice_notes = null;
     protected array|string|null $ticket_design_settings = null;
@@ -183,6 +185,7 @@ abstract class EventSettingDomainObjectAbstract extends \HiEvents\DomainObjects\
                     'allow_orders_awaiting_offline_payment_to_check_in' => $this->allow_orders_awaiting_offline_payment_to_check_in ?? null,
                     'swish_number' => $this->swish_number ?? null,
                     'email_logo_url' => $this->email_logo_url ?? null,
+                    'show_secure_checkout_notice' => $this->show_secure_checkout_notice ?? null,
                     'invoice_payment_terms_days' => $this->invoice_payment_terms_days ?? null,
                     'invoice_notes' => $this->invoice_notes ?? null,
                     'ticket_design_settings' => $this->ticket_design_settings ?? null,
@@ -713,6 +716,17 @@ abstract class EventSettingDomainObjectAbstract extends \HiEvents\DomainObjects\
     public function getEmailLogoUrl(): ?string
     {
         return $this->email_logo_url;
+    }
+
+    public function setShowSecureCheckoutNotice(bool $show_secure_checkout_notice): self
+    {
+        $this->show_secure_checkout_notice = $show_secure_checkout_notice;
+        return $this;
+    }
+
+    public function getShowSecureCheckoutNotice(): bool
+    {
+        return $this->show_secure_checkout_notice;
     }
 
     public function setAllowOrdersAwaitingOfflinePaymentToCheckIn(

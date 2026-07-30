@@ -72,6 +72,7 @@ class UpdateEventSettingsHandler
                     'allow_orders_awaiting_offline_payment_to_check_in' => $settings->allow_orders_awaiting_offline_payment_to_check_in,
                     'swish_number' => $settings->swish_number !== null ? trim($settings->swish_number) : null,
                     'email_logo_url' => $settings->email_logo_url !== null ? trim($settings->email_logo_url) : null,
+                    'show_secure_checkout_notice' => $settings->show_secure_checkout_notice,
 
                     // Invoice settings
                     'enable_invoicing' => $settings->enable_invoicing,

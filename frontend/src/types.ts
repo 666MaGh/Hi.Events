@@ -224,6 +224,7 @@ export interface EventSettings {
     allow_orders_awaiting_offline_payment_to_check_in: boolean;
     swish_number?: string;
     email_logo_url?: string | null;
+    show_secure_checkout_notice?: boolean;
 
     // Invoice settings
     enable_invoicing: boolean;

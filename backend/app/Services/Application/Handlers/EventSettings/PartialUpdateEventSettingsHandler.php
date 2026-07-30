@@ -98,6 +98,8 @@ class PartialUpdateEventSettingsHandler
                 'email_logo_url' => array_key_exists('email_logo_url', $eventSettingsDTO->settings)
                     ? $eventSettingsDTO->settings['email_logo_url']
                     : $existingSettings->getEmailLogoUrl(),
+                'show_secure_checkout_notice' => $eventSettingsDTO->settings['show_secure_checkout_notice']
+                    ?? $existingSettings->getShowSecureCheckoutNotice(),
 
                 // Invoice settings
                 'enable_invoicing' => $eventSettingsDTO->settings['enable_invoicing'] ?? $existingSettings->getEnableInvoicing(),

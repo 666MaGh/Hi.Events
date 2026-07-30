@@ -69,6 +69,7 @@ class UpdateEventSettingsRequest extends BaseRequest
             'allow_orders_awaiting_offline_payment_to_check_in' => ['boolean'],
             'swish_number' => ['nullable', 'string', 'max:20', 'regex:/^[0-9 +\-]*$/'],
             'email_logo_url' => ['nullable', 'url', 'max:255'],
+            'show_secure_checkout_notice' => ['boolean'],
 
             // Invoice settings
             'enable_invoicing' => ['boolean'],
