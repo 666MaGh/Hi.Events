@@ -77,6 +77,16 @@
     padding: 15px;
     border-bottom: 1px solid #e0e0e0;
 
+    &.attendeeUnpaid {
+      background-color: #fdecec;
+      border: 2px solid #e03131;
+      border-radius: 6px;
+
+      .details, .details b, .details span, .details .product {
+        color: #c92a2a;
+      }
+    }
+
     .details {
       flex: 1;
       gap: 5px;
@@ -85,8 +95,9 @@
 
       .awaitingPayment {
         margin: 3px 0;
-        color: #e09300;
+        color: #e03131;
         font-weight: 900;
+        text-transform: uppercase;
       }
 
       .product {

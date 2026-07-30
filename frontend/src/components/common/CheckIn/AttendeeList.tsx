@@ -73,7 +73,12 @@ export const AttendeeList = ({
                 const isAttendeeAwaitingPayment = attendee.status === 'AWAITING_PAYMENT';
 
                 return (
-                    <div className={classes.attendee} key={attendee.public_id}>
+                    <div
+                        className={isAttendeeAwaitingPayment
+                            ? `${classes.attendee} ${classes.attendeeUnpaid}`
+                            : classes.attendee}
+                        key={attendee.public_id}
+                    >
                         <div className={classes.details}>
                             <div>
                                 <b>{attendee.first_name} {attendee.last_name}</b>
