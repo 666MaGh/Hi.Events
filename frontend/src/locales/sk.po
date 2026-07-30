@@ -1359,7 +1359,7 @@ msgid "By adding tracking pixels, you acknowledge that you and this platform are
 msgstr "Pridaním sledovacích pixelov potvrdzujete, že vy a táto platforma ste spoločnými správcami zhromaždených údajov. Ste zodpovední za zabezpečenie zákonného základu pre toto spracovanie podľa platných zákonov o ochrane súkromia (GDPR, CCPA atď.)."
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:748
-#: src/components/routes/product-widget/Payment/index.tsx:153
+#: src/components/routes/product-widget/Payment/index.tsx:164
 msgid "By continuing, you agree to the <0>{0} Terms of Service</0>"
 msgstr "Pokračovaním súhlasíte s <0>Podmienkami služby {0}</0>"
 
@@ -1810,12 +1810,16 @@ msgstr "Kľúčové slová oddelené čiarkou popisujúce udalosť. Tieto budú 
 msgid "Communication Preferences"
 msgstr "Preferencie komunikácie"
 
+#: src/components/routes/product-widget/Payment/index.tsx:147
+msgid "Complete order"
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:744
 msgid "Complete Order"
 msgstr "Dokončiť objednávku"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:364
-#: src/components/routes/product-widget/Payment/index.tsx:149
+#: src/components/routes/product-widget/Payment/index.tsx:153
 msgid "Complete Payment"
 msgstr "Dokončiť platbu"
 
@@ -6283,7 +6287,7 @@ msgstr "patrik@acme.com"
 msgid "Paused"
 msgstr "Pozastavené"
 
-#: src/components/routes/product-widget/Payment/index.tsx:147
+#: src/components/routes/product-widget/Payment/index.tsx:151
 msgid "Pay"
 msgstr "Zaplatiť"
 
@@ -6332,7 +6336,7 @@ msgid "Payment Failed"
 msgstr "Platba zlyhala"
 
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:391
-#: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:16
+#: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:14
 msgid "Payment Instructions"
 msgstr "Pokyny k platbe"
 
@@ -10240,6 +10244,14 @@ msgstr "Pred odosielaním správ musíte overiť e-mail účtu."
 #: src/components/layouts/AuthLayout/index.tsx:62
 msgid "You own 100% of your attendee data, always"
 msgstr "Vždy vlastníte 100 % dát o účastníkoch"
+
+#: src/components/routes/product-widget/Payment/index.tsx:158
+msgid "You pay in the next step, with Swish or at the door."
+msgstr ""
+
+#: src/components/routes/product-widget/Payment/index.tsx:159
+msgid "You pay in the next step."
+msgstr ""
 
 #: src/components/common/PlatformFeesSettings/index.tsx:67
 msgid "You receive"

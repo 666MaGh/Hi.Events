@@ -1359,7 +1359,7 @@ msgid "By adding tracking pixels, you acknowledge that you and this platform are
 msgstr "Al añadir píxeles de seguimiento, reconoces que tú y esta plataforma son corresponsables de los datos recopilados. Eres responsable de garantizar que tienes una base legal para este procesamiento según las leyes de privacidad aplicables (RGPD, CCPA, etc.)."
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:748
-#: src/components/routes/product-widget/Payment/index.tsx:153
+#: src/components/routes/product-widget/Payment/index.tsx:164
 msgid "By continuing, you agree to the <0>{0} Terms of Service</0>"
 msgstr "Al continuar, aceptas los <0>Términos de Servicio de {0}</0>"
 
@@ -1810,12 +1810,16 @@ msgstr "Palabras clave separadas por comas que describen el evento. Estos serán
 msgid "Communication Preferences"
 msgstr "Preferencias de comunicación"
 
+#: src/components/routes/product-widget/Payment/index.tsx:147
+msgid "Complete order"
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:744
 msgid "Complete Order"
 msgstr "Completar Orden"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:364
-#: src/components/routes/product-widget/Payment/index.tsx:149
+#: src/components/routes/product-widget/Payment/index.tsx:153
 msgid "Complete Payment"
 msgstr "El pago completo"
 
@@ -6283,7 +6287,7 @@ msgstr "patrick@acme.com"
 msgid "Paused"
 msgstr "Pausado"
 
-#: src/components/routes/product-widget/Payment/index.tsx:147
+#: src/components/routes/product-widget/Payment/index.tsx:151
 msgid "Pay"
 msgstr "Pagar"
 
@@ -6332,7 +6336,7 @@ msgid "Payment Failed"
 msgstr "Pago fallido"
 
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:391
-#: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:16
+#: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:14
 msgid "Payment Instructions"
 msgstr "Instrucciones de pago"
 
@@ -10240,6 +10244,14 @@ msgstr "Debes verificar el correo electrónico de tu cuenta antes de poder envia
 #: src/components/layouts/AuthLayout/index.tsx:62
 msgid "You own 100% of your attendee data, always"
 msgstr "Eres dueño del 100% de los datos de tus asistentes, siempre"
+
+#: src/components/routes/product-widget/Payment/index.tsx:158
+msgid "You pay in the next step, with Swish or at the door."
+msgstr ""
+
+#: src/components/routes/product-widget/Payment/index.tsx:159
+msgid "You pay in the next step."
+msgstr ""
 
 #: src/components/common/PlatformFeesSettings/index.tsx:67
 msgid "You receive"

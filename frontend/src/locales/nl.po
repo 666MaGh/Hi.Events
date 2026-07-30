@@ -1360,7 +1360,7 @@ msgid "By adding tracking pixels, you acknowledge that you and this platform are
 msgstr "Door trackingpixels toe te voegen, erkent u dat u en dit platform gezamenlijke verwerkingsverantwoordelijken zijn van de verzamelde gegevens. U bent verantwoordelijk voor het waarborgen van een rechtmatige grondslag voor deze verwerking onder toepasselijke privacywetgeving (AVG, CCPA, enz.)."
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:748
-#: src/components/routes/product-widget/Payment/index.tsx:153
+#: src/components/routes/product-widget/Payment/index.tsx:164
 msgid "By continuing, you agree to the <0>{0} Terms of Service</0>"
 msgstr "Door verder te gaan, gaat u akkoord met de <0>{0} Servicevoorwaarden</0>"
 
@@ -1811,12 +1811,16 @@ msgstr "Door komma's gescheiden trefwoorden die het evenement beschrijven. Deze 
 msgid "Communication Preferences"
 msgstr "Communicatievoorkeuren"
 
+#: src/components/routes/product-widget/Payment/index.tsx:147
+msgid "Complete order"
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:744
 msgid "Complete Order"
 msgstr "Volledige bestelling"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:364
-#: src/components/routes/product-widget/Payment/index.tsx:149
+#: src/components/routes/product-widget/Payment/index.tsx:153
 msgid "Complete Payment"
 msgstr "Volledige betaling"
 
@@ -6284,7 +6288,7 @@ msgstr "patrick@acme.com"
 msgid "Paused"
 msgstr "Gepauzeerd"
 
-#: src/components/routes/product-widget/Payment/index.tsx:147
+#: src/components/routes/product-widget/Payment/index.tsx:151
 msgid "Pay"
 msgstr "Betalen"
 
@@ -6333,7 +6337,7 @@ msgid "Payment Failed"
 msgstr "Betaling mislukt"
 
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:391
-#: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:16
+#: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:14
 msgid "Payment Instructions"
 msgstr "Betalingsinstructies"
 
@@ -10241,6 +10245,14 @@ msgstr "U moet het e-mailadres van uw account verifiëren voordat u berichten ku
 #: src/components/layouts/AuthLayout/index.tsx:62
 msgid "You own 100% of your attendee data, always"
 msgstr "U bent 100% eigenaar van uw deelnemersgegevens, altijd"
+
+#: src/components/routes/product-widget/Payment/index.tsx:158
+msgid "You pay in the next step, with Swish or at the door."
+msgstr ""
+
+#: src/components/routes/product-widget/Payment/index.tsx:159
+msgid "You pay in the next step."
+msgstr ""
 
 #: src/components/common/PlatformFeesSettings/index.tsx:67
 msgid "You receive"

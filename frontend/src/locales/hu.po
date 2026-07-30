@@ -1359,7 +1359,7 @@ msgid "By adding tracking pixels, you acknowledge that you and this platform are
 msgstr "A követőpixelek hozzáadásával elismeri, hogy Ön és ez a platform közös adatkezelők a gyűjtött adatok tekintetében. Ön felelős azért, hogy jogszerű alappal rendelkezzen ehhez az adatkezeléshez az alkalmazandó adatvédelmi jogszabályok (GDPR, CCPA stb.) szerint."
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:748
-#: src/components/routes/product-widget/Payment/index.tsx:153
+#: src/components/routes/product-widget/Payment/index.tsx:164
 msgid "By continuing, you agree to the <0>{0} Terms of Service</0>"
 msgstr "A folytatással elfogadja a(z) <0>{0} Szolgáltatási feltételeket</0>"
 
@@ -1810,12 +1810,16 @@ msgstr "Vesszővel elválasztott kulcsszavak, amelyek leírják az eseményt. Ez
 msgid "Communication Preferences"
 msgstr "Kommunikációs beállítások"
 
+#: src/components/routes/product-widget/Payment/index.tsx:147
+msgid "Complete order"
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:744
 msgid "Complete Order"
 msgstr "Megrendelés befejezése"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:364
-#: src/components/routes/product-widget/Payment/index.tsx:149
+#: src/components/routes/product-widget/Payment/index.tsx:153
 msgid "Complete Payment"
 msgstr "Fizetés befejezése"
 
@@ -6283,7 +6287,7 @@ msgstr "patrick@acme.com"
 msgid "Paused"
 msgstr "Szüneteltetve"
 
-#: src/components/routes/product-widget/Payment/index.tsx:147
+#: src/components/routes/product-widget/Payment/index.tsx:151
 msgid "Pay"
 msgstr "Fizetés"
 
@@ -6332,7 +6336,7 @@ msgid "Payment Failed"
 msgstr "Fizetés sikertelen"
 
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:391
-#: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:16
+#: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:14
 msgid "Payment Instructions"
 msgstr "Fizetési utasítások"
 
@@ -10240,6 +10244,14 @@ msgstr "Ellenőriznie kell fiókja e-mail címét, mielőtt üzeneteket küldhet
 #: src/components/layouts/AuthLayout/index.tsx:62
 msgid "You own 100% of your attendee data, always"
 msgstr "Mindig Ön birtokolja a résztvevői adatok 100%-át"
+
+#: src/components/routes/product-widget/Payment/index.tsx:158
+msgid "You pay in the next step, with Swish or at the door."
+msgstr ""
+
+#: src/components/routes/product-widget/Payment/index.tsx:159
+msgid "You pay in the next step."
+msgstr ""
 
 #: src/components/common/PlatformFeesSettings/index.tsx:67
 msgid "You receive"

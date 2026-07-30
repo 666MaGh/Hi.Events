@@ -105,7 +105,7 @@ const Payment = () => {
 
                 {isOfflineEnabled && (
                     <div style={{display: activePaymentMethod === 'OFFLINE' ? 'block' : 'none'}}>
-                        <OfflinePaymentMethod event={checkoutEvent as Event} order={order}/>
+                        <OfflinePaymentMethod event={checkoutEvent as Event}/>
                     </div>
                 )}
 
@@ -137,17 +137,28 @@ const Payment = () => {
 
                 <div className={classes.checkoutActions}>
                     <Button
-                        className={classes.continueButton}
+                        className={activePaymentMethod === 'OFFLINE'
+                            ? `${classes.continueButton} ${classes.pulseButton}`
+                            : classes.continueButton}
                         loading={isLoading || isPaymentLoading}
                         onClick={handleSubmit}
                     >
-                        {order?.is_payment_required ? (
+                        {activePaymentMethod === 'OFFLINE' ? (
+                            <Text fw={600}>{t`Complete order`}</Text>
+                        ) : order?.is_payment_required ? (
                             <Group gap={8} wrap="nowrap">
                                 <IconLock size={16}/>
                                 <Text fw={600}>{t`Pay`} {formatCurrency(order.total_gross, order.currency)}</Text>
                             </Group>
                         ) : t`Complete Payment`}
                     </Button>
+                    {activePaymentMethod === 'OFFLINE' && (
+                        <p className={classes.offlineNote}>
+                            {checkoutEvent?.settings?.swish_number
+                                ? t`You pay in the next step, with Swish or at the door.`
+                                : t`You pay in the next step.`}
+                        </p>
+                    )}
                     {getConfig('VITE_TOS_URL') && (
                         <p className={classes.tosNotice}>
                             <Trans>

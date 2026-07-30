@@ -1359,7 +1359,7 @@ msgid "By adding tracking pixels, you acknowledge that you and this platform are
 msgstr "En ajoutant des pixels de suivi, vous reconnaissez que vous et cette plateforme êtes responsables conjoints des données collectées. Vous êtes responsable de vous assurer que vous disposez d'une base légale pour ce traitement en vertu des lois applicables sur la protection des données (RGPD, CCPA, etc.)."
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:748
-#: src/components/routes/product-widget/Payment/index.tsx:153
+#: src/components/routes/product-widget/Payment/index.tsx:164
 msgid "By continuing, you agree to the <0>{0} Terms of Service</0>"
 msgstr "En continuant, vous acceptez les <0>Conditions d'utilisation de {0}</0>"
 
@@ -1810,12 +1810,16 @@ msgstr "Mots-clés séparés par des virgules qui décrivent l'événement. Ceux
 msgid "Communication Preferences"
 msgstr "Préférences de communication"
 
+#: src/components/routes/product-widget/Payment/index.tsx:147
+msgid "Complete order"
+msgstr ""
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:744
 msgid "Complete Order"
 msgstr "Complétez la commande"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:364
-#: src/components/routes/product-widget/Payment/index.tsx:149
+#: src/components/routes/product-widget/Payment/index.tsx:153
 msgid "Complete Payment"
 msgstr "Paiement complet"
 
@@ -6283,7 +6287,7 @@ msgstr "patrick@acme.com"
 msgid "Paused"
 msgstr "En pause"
 
-#: src/components/routes/product-widget/Payment/index.tsx:147
+#: src/components/routes/product-widget/Payment/index.tsx:151
 msgid "Pay"
 msgstr "Payer"
 
@@ -6332,7 +6336,7 @@ msgid "Payment Failed"
 msgstr "Paiement échoué"
 
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:391
-#: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:16
+#: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:14
 msgid "Payment Instructions"
 msgstr "Instructions de paiement"
 
@@ -10240,6 +10244,14 @@ msgstr "Vous devez vérifier l'adresse e-mail de votre compte avant de pouvoir e
 #: src/components/layouts/AuthLayout/index.tsx:62
 msgid "You own 100% of your attendee data, always"
 msgstr "Vous possédez 100 % des données de vos participants, toujours"
+
+#: src/components/routes/product-widget/Payment/index.tsx:158
+msgid "You pay in the next step, with Swish or at the door."
+msgstr ""
+
+#: src/components/routes/product-widget/Payment/index.tsx:159
+msgid "You pay in the next step."
+msgstr ""
 
 #: src/components/common/PlatformFeesSettings/index.tsx:67
 msgid "You receive"

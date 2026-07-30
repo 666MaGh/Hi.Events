@@ -76,6 +76,29 @@ $transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
+.pulseButton {
+  animation: ctaPulse 2s ease-in-out infinite;
+}
+
+@keyframes ctaPulse {
+  0% { box-shadow: 0 0 0 0 var(--checkout-accent-soft, rgba(0, 0, 0, 0.3)); }
+  70% { box-shadow: 0 0 0 14px rgba(0, 0, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulseButton {
+    animation: none;
+  }
+}
+
+.offlineNote {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--checkout-text-secondary, #6B7280);
+}
+
 .tosNotice {
   text-align: center;
   margin-top: 12px;

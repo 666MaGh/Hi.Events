@@ -1359,7 +1359,7 @@ msgid "By adding tracking pixels, you acknowledge that you and this platform are
 msgstr "Genom att lägga till spårningspixlar bekräftar du att du och denna plattform är gemensamt personuppgiftsansvariga för de insamlade uppgifterna. Du ansvarar för att säkerställa att du har en laglig grund för denna behandling enligt tillämpliga integritetslagar (GDPR, CCPA, etc.)."
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:748
-#: src/components/routes/product-widget/Payment/index.tsx:153
+#: src/components/routes/product-widget/Payment/index.tsx:164
 msgid "By continuing, you agree to the <0>{0} Terms of Service</0>"
 msgstr "Genom att fortsätta godkänner du <0>{0} användarvillkor</0>"
 
@@ -1810,12 +1810,16 @@ msgstr "Kommaseparerade nyckelord som beskriver evenemanget. Dessa används av s
 msgid "Communication Preferences"
 msgstr "Kommunikationspreferens"
 
+#: src/components/routes/product-widget/Payment/index.tsx:147
+msgid "Complete order"
+msgstr "Slutför beställning"
+
 #: src/components/routes/product-widget/CollectInformation/index.tsx:744
 msgid "Complete Order"
 msgstr "Slutför order"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:364
-#: src/components/routes/product-widget/Payment/index.tsx:149
+#: src/components/routes/product-widget/Payment/index.tsx:153
 msgid "Complete Payment"
 msgstr "Slutför betalning"
 
@@ -2847,7 +2851,7 @@ msgid ""
 "Due to the high risk of spam, you must connect a Stripe account before you can send messages to attendees.\n"
 "This is to ensure that all event organizers are verified and accountable."
 msgstr "På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare. Detta för att säkerställa att alla arrangörer är verifierade och ansvariga."
-"På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare.\n"
+"På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare. Detta för att säkerställa att alla arrangörer är verifierade och ansvariga.På grund av den höga risken för skräppost måste du koppla ett Stripe-konto innan du kan skicka meddelanden till deltagare.\n"
 "Detta för att säkerställa att alla arrangörer är verifierade och ansvariga.På grund av den höga risken för spam måste du ansluta ett Stripe-konto innan du kan skicka meddelanden till deltagare.\n"
 "Detta är för att säkerställa att alla evenemangsarrangörer är verifierade och ansvariga."
 
@@ -6284,7 +6288,7 @@ msgstr "patrick@acme.com"
 msgid "Paused"
 msgstr "Pausad"
 
-#: src/components/routes/product-widget/Payment/index.tsx:147
+#: src/components/routes/product-widget/Payment/index.tsx:151
 msgid "Pay"
 msgstr "Betala"
 
@@ -6333,7 +6337,7 @@ msgid "Payment Failed"
 msgstr "Betalning misslyckades"
 
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:391
-#: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:16
+#: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:14
 msgid "Payment Instructions"
 msgstr "Betalningsinstruktioner"
 
@@ -6861,7 +6865,7 @@ msgid ""
 "Provide additional context or instructions for this question. Use this field to add terms\n"
 "and conditions, guidelines, or any important information that attendees need to know before answering."
 msgstr "Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor, riktlinjer eller annan viktig information som deltagarna behöver känna till innan de svarar."
-"Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor,\n"
+"Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor, riktlinjer eller annan viktig information som deltagarna behöver känna till innan de svarar.Ge ytterligare sammanhang eller instruktioner för denna fråga. Använd fältet för att lägga till villkor,\n"
 "riktlinjer eller annan viktig information som deltagarna behöver känna till innan de svarar.Ge ytterligare kontext eller instruktioner för denna fråga. Använd detta fält för att lägga till villkor,\n"
 "riktlinjer eller viktig information som deltagare behöver veta innan de svarar."
 
@@ -10242,6 +10246,14 @@ msgstr "Du behöver verifiera kontots e-postadress innan du kan skicka meddeland
 #: src/components/layouts/AuthLayout/index.tsx:62
 msgid "You own 100% of your attendee data, always"
 msgstr "Du äger alltid 100 % av din deltagardata"
+
+#: src/components/routes/product-widget/Payment/index.tsx:158
+msgid "You pay in the next step, with Swish or at the door."
+msgstr "Du betalar i nästa steg, med Swish eller i dörren."
+
+#: src/components/routes/product-widget/Payment/index.tsx:159
+msgid "You pay in the next step."
+msgstr "Du betalar i nästa steg."
 
 #: src/components/common/PlatformFeesSettings/index.tsx:67
 msgid "You receive"
